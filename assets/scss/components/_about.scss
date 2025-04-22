@@ -1,0 +1,58 @@
+/* ABOUT CSS START */
+.sotcox-about-section {
+    .abt-desc {
+        padding-right: 50px;
+        @include respond(lg) {
+            padding-right: 0px;
+            padding-top: 35px;
+        }
+    }
+}
+.about-img-wrapper {
+    animation: shapeDownLeft 2s linear infinite alternate;
+}
+.about-content-wrapper {
+    @include respond(lg) {
+        padding-left: 0px;
+        padding-top: 80px;
+    }
+}
+.featured-lists {
+    li {
+        font-weight: 500;
+        color: $dark;
+        font-family: $heading-font;
+        letter-spacing: -0.01em;
+        @include d-flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        i {
+            color: $theme-color;
+            margin-right: 10px;
+            translate: 0px 5px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.sotcox-video-img {
+    position: relative;
+    img {
+        border-radius: 10px;
+        min-height: 250px;
+        object-fit: cover;
+    }
+    .sotcox-video-btn {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        z-index: 2;
+        font-size: 20px;
+        height: 80px;
+        width: 80px;
+    }
+}
+/* ABOUT CSS END */

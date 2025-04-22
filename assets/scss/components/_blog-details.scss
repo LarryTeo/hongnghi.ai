@@ -1,0 +1,455 @@
+/* blog details css */
+.tag-social-wrapper {
+	clear: both;
+	.sotcox-social-links {
+		justify-content: end;
+		@include respond(xs) {
+			justify-content: flex-start !important;
+		}
+	}
+	.sotcox-social-links {
+		a {
+			width: 40px;
+			height: 40px;
+			border: 1px solid $theme-color-light;
+			border-radius: 50px;
+			font-size: 14px;
+			@include d-flex(center, center);
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+			&:hover,
+			&.active {
+				background: $theme-color;
+				color: $white;
+				border-color: $theme-color;
+			}
+		}
+	}
+}
+
+.post-author {
+	&__wrapper {
+		background: $theme-color-light;
+		border-radius: 10px;
+		padding: 40px;
+		@include d-flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		@include respond(xxs) {
+			flex-wrap: wrap;
+			padding: 25px;
+		}
+	}
+	&__thumb {
+		width: 150px;
+		height: 150px;
+		border-radius: 50px;
+		margin-right: 30px;
+		img {
+			border-radius: 50%;
+		}
+		@include respond(xxs) {
+			margin-right: 0px;
+			margin-bottom: 30px;
+		}
+	}
+	&__content {
+		width: calc(100% - 180px);
+		@include respond(xxs) {
+			width: 100%;
+		}
+	}
+	.name {
+		margin-bottom: 10px;
+		font-size: 24px;
+	}
+	.sotcox-social-links {
+		margin-top: 5px;
+		a {
+			font-size: 18px;
+			.fa-facebook-f {
+				color: #266ff2;
+			}
+			.fa-twitter {
+				color: #1da1f2;
+			}
+			.fa-linkedin-in {
+				color: #0077b5;
+			}
+		}
+	}
+}
+
+.sotcox-title {
+	font-size: 32px;
+}
+
+// tagcloud css
+.tagcloud,
+.wp-block-tag-cloud {
+	display: flex !important;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: -10px;
+	a {
+		font-size: 12px !important;
+		border: 1px solid $theme-color-light;
+		font-weight: 600;
+		color: $pera-color;
+		display: block;
+		margin-top: 10px;
+		padding: 10px 25px;
+		padding-bottom: 11px;
+		text-transform: uppercase;
+		line-height: 100%;
+		padding-bottom: 8px;
+		background: transparent;
+		border-radius: 5px;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+		&:hover {
+			background: $theme-color;
+			border-color: $theme-color;
+			color: $white;
+		}
+	}
+}
+
+.footer_widget {
+	.tagcloud {
+		a {
+			background: $dark;
+			color: $white;
+			border-color: $dark;
+			&:hover {
+				background: $theme-color;
+				border-color: $theme-color;
+				color: $white;
+			}
+		}
+	}
+}
+
+// post details navigation
+.sotcox-details-navigation {
+	align-items: center;
+	@include respond(xs) {
+		flex-direction: row !important;
+		text-align: left !important;
+		.ml-20 {
+			margin-right: 20px;
+			margin-left: 0px;
+		}
+	}
+	@include respond(xxs) {
+		flex-wrap: wrap;
+	}
+	.rp-thumb {
+		img {
+			max-width: 80px;
+			min-height: 60px;
+			object-fit: cover;
+		}
+		@include respond(xxs) {
+			margin-bottom: 15px;
+		}
+	}
+	.rp-content {
+		width: 100%;
+		.rp-nav {
+			font-size: 14px;
+			color: #999;
+		}
+		.rp-title {
+			margin-top: 2px;
+			font-size: 20px;
+			font-weight: 700;
+			text-transform: uppercase;
+			a {
+				color: $dark;
+			}
+		}
+	}
+}
+
+.sotcox-dn-wrapper {
+	.col-xl-6 {
+		width: 47.5%;
+		@include respond(xs) {
+			width: 100%;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.col-xl-1 {
+		width: 5%;
+		@include respond(xs) {
+			display: none;
+		}
+	}
+}
+
+.navigation-border {
+	overflow: hidden;
+	border-top: 1px solid $theme-color-light;
+}
+
+.blog__wrapper {
+	&--single {
+		.post-details-content {
+			overflow: hidden;
+			p {
+				overflow: visible;
+				display: block;
+				font-size: 16px;
+				line-height: 30px;
+				&:not(:last-child) {
+					margin-bottom: 25px;
+				}
+			}
+			blockquote {
+				padding: 0px 70px;
+				padding-top: 155px;
+				padding-bottom: 50px;
+				position: relative;
+				&::after {
+					@include after;
+					top: 0;
+					left: 50%;
+					@include transform(translateX(-50%));
+					background-image: url(../images/icons/quto-icon-small.png);
+					width: 70px;
+					height: 70px;
+					z-index: 1;
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-color: #fff;
+					border-radius: 50%;
+					top: 60px;
+				}
+				&::before {
+					@include after;
+					background-image: url(../images/icons/quto-icon-big.png);
+					top: 20px;
+					background-repeat: no-repeat;
+					background-position: center center;
+					left: 50%;
+					@include transform(translateX(-50%));
+					z-index: 1;
+					max-width: 256px;
+					max-height: 196px;
+				}
+				p {
+					font-size: 24px;
+					line-height: 36px;
+					margin-bottom: 0px;
+					a {
+						color: #dad3b8;
+					}
+				}
+				br {
+					display: none;
+				}
+				cite {
+					margin-top: 10px;
+					display: block;
+					color: $theme-color;
+					position: relative;
+					z-index: 2;
+					font-size: 14px;
+					font-weight: 700;
+					a {
+						color: $theme-color;
+						font-size: 14px;
+						font-style: normal;
+						font-weight: 700;
+					}
+				}
+			}
+		}
+		iframe {
+			height: auto;
+			min-height: 400px;
+		}
+		.post-video-btn {
+			width: 100px;
+			height: 100px;
+			font-size: 18px;
+		}
+		.owl-nav {
+			div {
+				width: 60px;
+				height: 60px;
+			}
+		}
+		.blog-list-item {
+			padding-left: 0px;
+			margin-bottom: 0px;
+		}
+	}
+	&--prev {
+		img {
+			width: 100%;
+		}
+		.mt-30 {
+			img {
+				border-radius: 10px;
+			}
+		}
+		.post-details-content {
+			blockquote {
+				margin-bottom: 40px;
+				margin-top: 40px;
+				p {
+					color: $dark;
+					overflow: visible;
+					text-overflow: unset;
+					display: block;
+					@include respond(xs) {
+						font-size: 20px;
+						line-height: 30px;
+					}
+					@include respond(sm) {
+						font-size: 24px;
+						line-height: 36px;
+					}
+				}
+				@include respond(xs) {
+					padding-left: 30px;
+					padding-right: 30px;
+					padding-top: 145px;
+					padding-bottom: 30px;
+				}
+				@include respond(sm) {
+					padding: 0px 70px;
+					padding-top: 155px;
+					padding-bottom: 50px;
+				}
+			}
+		}
+	}
+}
+
+.blog-list-item {
+	padding: 0;
+	list-style: none;
+	margin-top: -15px;
+	padding-left: 15px;
+	li {
+		position: relative;
+		margin-top: 15px;
+		@include d-flex;
+		align-items: center;
+		flex-wrap: nowrap;
+		img {
+			width: auto;
+			margin-right: 10px;
+		}
+	}
+}
+
+.post-details-content {
+	blockquote {
+		text-align: center;
+		@include d-flex;
+		align-items: center;
+		justify-content: center;
+		background: $theme-color-light;
+		flex-direction: column;
+		p {
+			color: $pera-color;
+			position: relative;
+			z-index: 2;
+			margin-bottom: 0px !important;
+		}
+	}
+	.wp-block-cover {
+		p {
+			font-size: 2em;
+			line-height: 1.25;
+		}
+	}
+}
+
+.social-share-wrapper {
+	@include respond(xs) {
+		margin-top: 30px;
+	}
+}
+
+blockquote {
+	code {
+		color: $white;
+	}
+}
+
+.post-details-content > h5 {
+	margin-bottom: 20px;
+}
+
+.comment-desc {
+	overflow: hidden;
+}
+
+
+.sotcox-next-prev-wrapper {
+    @include d-flex;
+    justify-content: space-between;
+    div {
+        @include d-flex;
+        align-items: center;
+    }
+    a {
+        font-weight: 700;
+        color: $theme-color;
+		font-size: 16px;
+		@include d-flex;
+		align-items: center;
+		&:hover {
+			.icon {
+				background: $theme-color;
+				border-color: $theme-color;
+				color: $white;
+			}
+		}
+    }
+}
+.sotcox-next-prev {
+    .icon {
+        translate: 0px -1px;
+		width: 60px;
+		height: 60px;
+		border: 1px solid $theme-color-light;
+		border-radius: 50%;
+		@include d-flex(center, center);
+		font-size: 24px;
+		@include transition(0.4s);
+		@include respond(xxs) {
+			width: 40px;
+			height: 40px;
+			font-size: 16px;
+		}
+    }
+	.text {
+		color: $theme-color;
+	}
+    &__prev {
+        .icon {
+            margin-right: 20px;
+			@include respond(xxs) {
+				margin-right: 15px;
+			}
+        }
+    }
+    &__next {
+        .icon {
+            margin-left: 20px;
+			@include respond(xxs) {
+				margin-left: 15px;
+			}
+        }
+    }
+}

@@ -1,0 +1,26 @@
+/* WCO CSS START */
+.sotcox-wcu-section {
+    .sotcox-section-heading {
+        @include respond(lg) {
+            padding-top: 60px;
+        }
+    }
+}
+.wcu-img-wrapper {
+    animation: shapeDownLeft 2s linear infinite alternate;
+}
+.sotcox-wcu-box {
+    .icon {
+        margin-bottom: 35px;
+    }
+    .content {
+        padding-right: 60px;
+        @include respond(md) {
+            padding-right: 0px;
+        }
+    }
+    .title {
+        margin-bottom: 15px;
+    }
+}
+/* WCO CSS END */

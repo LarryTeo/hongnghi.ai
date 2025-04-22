@@ -1,0 +1,1591 @@
+<!doctype html>
+<html class="no-js" lang="vi">
+
+<head>
+
+    <!--========= Required meta tags =========-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <!-- Meta tags cho hiển thị preview đầy đủ -->
+    <meta property="og:title" content="Hồng Nghi - Giải pháp chuyển đổi số bền vững" />
+    <meta property="og:description" content="Với kinh nghiệm thực tế, chúng tôi mong muốn chia sẻ giải pháp và cách làm hiệu quả, giúp doanh nghiệp chuyển đổi số một cách bền vững và thực tiễn." />
+    <meta property="og:image" content="https://hongnghi.ai/assets/img/home/home-page-2.png" />
+    <meta property="og:url" content="https://hongnghi.ai/" />
+    <meta property="og:type" content="website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--====== Title ======-->
+    <title>Hống Nghi - Thiết Kế Phần Mềm Theo Yêu Cầu</title>
+
+    <!--====== Favicon ======-->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="images/x-icon">
+
+    <!--====== CSS Here ======-->
+    <!-- WOW.js CSS (for animations) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/lightcase.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/ukit.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+
+
+    <style>
+        /* CSS cho popup form */
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 900px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .popup-body {
+            display: flex;
+        }
+
+        .popup-left {
+            width: 65%;
+            padding-right: 20px;
+        }
+
+        .popup-right {
+            width: 35%;
+            padding-left: 20px;
+            border-left: 1px solid #ccc;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-section {
+            margin-bottom: 3cm;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close {
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .popup.h2 {
+            white-space: nowrap;
+            margin: 0;
+        }
+
+        /*css icon top up + zalo + dien thoai*/
+
+        .floating-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .icon {
+            width: 50px;
+            /* Đảm bảo tất cả icon có cùng kích thước */
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.2s;
+            position: relative;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+        .icon img {
+            width: 60%;
+            /* Giữ kích thước ảnh bên trong đồng đều */
+            height: 60%;
+            object-fit: contain;
+        }
+
+        .ping {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(0, 123, 255, 0.5);
+            -webkit-animation: ping 1.2s ease-in-out infinite both;
+            animation: ping 1.2s ease-in-out infinite both;
+        }
+
+        /* Animation */
+        @-webkit-keyframes ping {
+            0% {
+                -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+                opacity: 1;
+            }
+
+            50% {
+                -webkit-transform: scale(1.5);
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+
+            100% {
+                -webkit-transform: scale(2.5);
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes ping {
+            0% {
+                -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+                opacity: 1;
+            }
+
+            50% {
+                -webkit-transform: scale(1.5);
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+
+            100% {
+                -webkit-transform: scale(2.5);
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        /* css modal booking*/
+        .modal-body .form-label {
+            font-weight: 500;
+        }
+
+        .modal-body .form-control,
+        .modal-body .form-select {
+            margin-bottom: 8px;
+        }
+
+        .toast-container {
+            z-index: 9999;
+        }
+
+        .toast {
+            min-width: 300px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+        }
+
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+
+        .form-control.is-invalid,
+        .form-select.is-invalid {
+            border-color: #dc3545;
+            background-image: none;
+        }
+
+        .invalid-feedback {
+            font-size: 0.875em;
+            display: none;
+        }
+
+        .modal-lg {
+            max-width: 750px;
+            /* Điều chỉnh chiều rộng theo ý muốn */
+        }
+
+        #scrollTop {
+            cursor: pointer;
+            z-index: 9999;
+            /* đảm bảo nổi lên trên */
+        }
+
+       
+    </style>
+
+
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--====== HEADER START ======-->
+    <div id="sotcox-loadding" class="sotcox-loader">
+        <div class="sotcox-spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!--====== HEADER END ======-->
+
+    <!--====== HEADER START ======-->
+    <header class="sotcox-header pt-50 pb-50" data-uk-sticky="top: 250; animation: uk-animation-slide-top;">
+        <div class="container-fluid sotcox-container__fluid">
+            <div class="row">
+                <div class="col-xl-10 col-lg-4 col-sm-6 col-7 align-self-center">
+                    <div class="sotcox-logo-menu-wrapper">
+                        <a href="trang-chu.html" class="sotcox-logo">
+                            <img src="assets/img/logo/logo.png" alt="LOGO">
+                        </a>
+                        <div class="sotcox-menu-wrapper">
+                            <div class="sotcox-main-menu">
+                                <nav id="sotcox-navbar">
+                                    <ul>
+                                        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                                        <li><a href="san-pham.html">Sản phẩm - Dịch vụ</a></li>
+                                        <li><a href="tin-tuc.html">Tin tức - Sự kiện</a></li>
+                                        <li><a href="lien-he.html">Liên hệ</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!--====== formTrial ======-->
+                            <!-- Nút mở form -->
+                            <a onclick="openPopup()" class="sotcox-btn">Dùng thử miễn phí >> <span></span></a>
+
+                            <!-- Popup Form -->
+                            <div class="popup" id="trialForm">
+                                <div class="popup-content">
+                                    <div class="popup-header">
+                                        <h2>Đăng ký dùng thử miễn phí</h2>
+                                        <span class="close" onclick="closePopup()">&times;</span>
+                                    </div>
+                                    <div class="popup-body row">
+                                        <div class="col-md-7 popup-left">
+                                            <form id="trialFormElement">
+                                                <div class="form-group mb-3">
+                                                    <input type="text" name="contact" class="form-control"
+                                                        placeholder="Họ tên của bạn*" required>
+                                                    <div class="invalid-feedback">Vui lòng nhập họ tên.</div>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <input type="tel" name="phone" class="form-control"
+                                                        placeholder="Số điện thoại của bạn*" required>
+                                                    <div class="invalid-feedback">Số điện thoại không hợp lệ.</div>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <input type="email" name="email" class="form-control"
+                                                        placeholder="Email công việc*" required>
+                                                    <div class="invalid-feedback">Email không hợp lệ.</div>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <select name="location" class="form-select" required>
+                                                        <option value="">Tỉnh/Thành phố bạn đang sinh sống*</option>
+                                                        <option value="Hà Nội">Hà Nội</option>
+                                                        <option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
+                                                        <option value="TP. Hồ Chí Minh">Khu vực khác</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">Vui lòng chọn tỉnh/thành.</div>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <input type="text" name="adress" class="form-control"
+                                                        placeholder="Địa chỉ chi tiết của bạn">
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <select name="product" class="form-select" required>
+                                                        <option value="">Chọn sản phẩm/dịch vụ bạn đang quan tâm*</option>
+                                                        <option value="ERP">Thiết kế phần mềm theo yêu cầu</option>
+                                                        <option value="ERP">Dịch vụ phần cứng</option>
+                                                        <option value="ERP">Dịch vụ API</option>
+                                                        <option value="ERP">Dịch vụ tự vấn CNTT</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">Vui lòng chọn sản phẩm/dịch vụ</div>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <textarea name="note" class="form-control"
+                                                        placeholder="Ghi chú/Lời nhắn của bạn"></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary w-100">Đăng ký</button>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-5 popup-right ps-4">
+                                            <div class="contact-section mb-4">
+                                                <img src="assets/img/icons/support-2.png" alt="Phone Icon" class="mb-2">
+                                                <h5>Gọi qua Hotline</h5>
+                                                <p><strong>0903 576 159</strong></p>
+                                            </div>
+                                            <div class="contact-section">
+                                                <img src="assets/img/icons/support-3.png" alt="Mail Icon" class="mb-2">
+                                                <h5>Gửi Email cho chúng tôi</h5>
+                                                <p><strong>sale@hongnghi.ai</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Toast cảm ơn -->
+                            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                <div id="trialToast" class="toast align-items-center text-bg-success border-0"
+                                    role="alert" data-bs-delay="3000">
+                                    <div class="d-flex">
+                                        <div class="toast-body">
+                                            Cảm ơn bạn đã đăng ký dùng thử. Chúng tôi sẽ liên hệ sớm nhất!
+                                        </div>
+                                        <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                                            data-bs-dismiss="toast"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Toast-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-8 col-sm-6 col-5 align-self-center">
+                    <div class="right-element">
+                        <ul class="list-unstyled d-flex align-items-center">
+                            <li class="sideinfo-trigger" data-sideinfo-trigger>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--====== HEADER END ======-->
+
+
+    <!--====== OVERLAY START ======-->
+    <div class="sotcox-overlay"></div>
+    <!--====== OVERLAY END ======-->
+
+    <!--====== SEARCH POPUP START ======-->
+    <div class="search-popup">
+        <div class="color-layer"></div>
+        <button class="close-search"><span class="far fa-arrow-up"></span></button>
+        <form method="post" action="tin-tuc.html">
+            <div class="form-group">
+                <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+                <button type="submit"><i class="far fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!--====== SEARCH POPUP END ======-->
+
+    <!--====== SIDE INFO FOR MOBILE START ======-->
+    <aside class="side-info-wrapper mm-only">
+        <nav>
+            <div class="nav" id="nav-tab" role="tablist">
+                <a class="nav-link active" id="menu-tab-1-tab" data-bs-toggle="tab" href="#menu-tab-1" role="tab"
+                    aria-controls="menu-tab-1" aria-selected="true">Menu</a>
+                <a class="nav-link" id="menu-tab-2-tab" data-bs-toggle="tab" href="#menu-tab-2" role="tab"
+                    aria-controls="menu-tab-2" aria-selected="false">Info</a>
+            </div>
+        </nav>
+        <div class="side-info__wrapper d-flex align-items-center justify-content-between">
+            <div class="side-info__logo">
+                <a href="trang-chu.html">
+                    <img src="assets/img/logo/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="side-info__close">
+                <a href="javascript:void(0);"><i class="far fa-times"></i></a>
+            </div>
+        </div>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="menu-tab-1" role="tabpanel"
+            aria-labelledby="menu-tab-1-tab">
+            <div class="sotcox-mobile-menu"></div>
+            </div>
+            <div class="tab-pane fade" id="menu-tab-2" role="tabpanel" aria-labelledby="menu-tab-2-tab">
+                <div class="side-info">
+                    <div class="side-info__content mb-35">
+                        <h4 class="title mb-10">Về chúng tôi</h4>
+                        <p>Là thành viên của Công ty TNHH DV TM XNK Hồng Nghi, chúng tôi được thành lập sau hành trình
+                            số
+                            hóa thành công nội bộ. Với kinh nghiệm thực tế, chúng tôi mong muốn chia sẻ giải pháp và
+                            cách làm
+                            hiệu quả, giúp doanh nghiệp chuyển đổi số một cách bền vững và thực tiễn.</p>
+                        <a class="sotcox-btn sotcox-btn__small mt-20" href="lien-he.html">Liên hệ ngay
+                            <span></span></a>
+                    </div>
+                    <div class="contact__info--wrapper mt-15">
+                        <h4 class="title mb-15">Liên hệ với chúng tôi</h4>
+                        <ul class="contact__info list-unstyled">
+                            <li>
+                                <span><i class="fas fa-map-marker-alt"></i></span>
+                                <p>7/6 Trần Văn Mười, Hóc Môn, TP. Hồ Chí Minh</p>
+                            </li>
+                            <li>
+                                <span><i class="fas fa-phone"></i></span>
+                                <p>0903 576 159</p>
+                            </li>
+                            <li>
+                                <span><i class="fas fa-envelope-open-text"></i></span>
+                                <p>sale@hongnghi.ai</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--====== SIDE INFO FOR MOBILE END ======-->
+
+
+    <!--====== SIDE INFO FOR DESKTOP START ======-->
+    <aside class="side-info-wrapper show-all">
+        <div class="side-info__wrapper d-flex align-items-center justify-content-between">
+            <div class="side-info__logo">
+                <a href="trang-chu.html">
+                    <img src="assets/img/logo/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="side-info__close">
+                <a href="javascript:void(0);"><i class="far fa-times"></i></a>
+            </div>
+        </div>
+        <div class="side-info">
+            <div class="side-info__content mb-35">
+                <h4 class="title mb-10">Về Chúng tôi</h4>
+                <p>Là thành viên của Công ty TNHH DV TM XNK Hồng Nghi, chúng tôi được thành lập sau hành trình số hóa
+                    thành công nội bộ. Với kinh nghiệm thực tế, chúng tôi mong muốn chia sẻ giải pháp và cách làm hiệu
+                    quả, giúp doanh nghiệp chuyển đổi số một cách bền vững và thực tiễn.</p>
+                <a class="sotcox-btn sotcox-btn__small mt-20" href="lien-he.html">Liên hệ Chúng tôi <span></span></a>
+            </div>
+            <div class="contact__info--wrapper mt-15">
+                <ul class="contact__info list-unstyled">
+                    <li>
+                        <span><i class="fas fa-map-marker-alt"></i></span>
+                        <p>7/6 Trần Văn Mười, Hóc Môn, TP. Hồ Chí Minh</p>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-phone"></i></span>
+                        <p>0903 576 159</p>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-envelope-open-text"></i></span>
+                        <p>sale@hongnghi.ai</p>
+                    </li>
+                </ul>
+                <!-- </div>
+            <div class="sotcox-social-links mt-30">
+                <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                <a href="#0"><i class="fab fa-twitter"></i></a>
+                <a href="#0"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#0"><i class="fab fa-instagram"></i></a>
+            </div> -->
+            </div>
+    </aside>
+    <!--====== SIDE INFO FOR DESKTOP END ======-->
+
+    <!--====== HERO SECTION START ======-->
+    <section class="sotcox-hero-section pb-90 pt-80">
+        <div class="shape shape__1 position-absolute wow fadeInUp" data-wow-delay="300ms" data-wow-duration="800ms"><img
+                src="assets/img/shapes/hero-shape-1.png" alt=""></div>
+        <div class="shape shape__2 position-absolute wow fadeInUp" data-wow-delay="600ms" data-wow-duration="800ms"><img
+                src="assets/img/shapes/hero-shape-2.png" alt=""></div>
+        <div class="container">
+            <div class="row flex-lg-row flex-md-column-reverse">
+                <div class="col-xl-5 col-lg-5">
+                    <div class="inner-content">
+                        <h3 class="title wow fadeInUp">NỀN TẢNG CHO DOANH NGHIỆP<br> VỮNG MẠNH</h3>
+                        <div class="inner-btns mt-50">
+                            <a href="san-pham.html" class="sotcox-btn wow fadeInUp" data-wow-delay="500ms"
+                                data-wow-duration="800ms">Sản phẩm - Dịch vụ <span></span></a>
+                        </div>
+                        <div class="sotcox-social-links mt-140">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7">
+                    <div class="inner-right">
+                        <div class="review-wrapper">
+                        </div>
+                        <div class="img-wrapper wow zoomIn" data-wow-delay="700ms" data-wow-duration="800ms">
+                            <img src="assets/img/home/home-page-2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== HERO SECTION END ======-->
+
+    <!--====== CARD WITH ICON SECTION START ======-->
+    <div class="sotcox-about-section theme-light-bg pt-40 pb-55">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="about-img-wrapper">
+                        <img src="assets/img/home/team-work.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="about-content-wrapper pl-80">
+                        <div class="sotcox-section-heading">
+                            <h2 class="header-section">Hãy cùng bắt đầu hành trình chuyển đối số cùng Hồng Nghi</h2>
+                            <p>Trên hành trình chuyển đổi số, cũng như nhiều doanh nghiệp khác Hồng Nghi cũng đối mặt
+                                với không ít thách thức như:</p>
+                        </div>
+                        <ul class="featured-lists list-unstyled mt-30">
+                            <li><i class="fas fa-circle-notch"></i> Thiếu chiến lược rõ ràng dẫn đến triển khai rời rạc,
+                                kém hiệu quả.</li>
+                            <li><i class="fas fa-circle-notch"></i> Chi phí đầu tư cao nhưng chưa đo lường được giá trị
+                                thực tế mang lại.</li>
+                            <li><i class="fas fa-circle-notch"></i> Nhân sự chưa sẵn sàng, thiếu kỹ năng và tâm lý e
+                                ngại thay đổi. </li>
+                            <li><i class="fas fa-circle-notch"></i> Khó khăn trong tích hợp hệ thống cũ – mới, gây gián
+                                đoạn vận hành.</li>
+                        </ul>
+                        <a href="gioi-thieu.html" class="sotcox-btn mt-35">xem thêm thông tin về Hồng Nghi <span></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== CARD WITH ICON SECTION END ======-->
+
+
+    <!--====== reasons ======-->
+    <div class="cit-reasons-body pt-40 pb-45">
+        <div class="cit-reasons-header">
+           LÝ DO KHÁCH HÀNG CHỌN HỒNG NGHI SOFTWARE
+        </div>
+        <div class="cit-reasons-container">
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                <div class="col">
+                    <div class="cit-reasons-card">
+                        <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                            <img src="assets/img/icons/synchronization_2250178.png"
+                                alt="Biểu tượng dấu vân tay cho kinh nghiệm và chuyên môn">
+                            <h5>Kinh nghiệm và chuyên môn</h5>
+                            <p>Có thế đảm nhiệm nhiều loại dự án phần mềm đa dạng, từ các ứng dụng di động đến các
+                                hệ thống doanh nghiệp phức tạp.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cit-reasons-card">
+                        <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                            <img src="assets/img/icons/synchronization_1248202.png"
+                                alt="Biểu tượng nhóm người cho tính linh hoạt">
+                            <h5>Tình Linh hoạt</h5>
+                            <p>Hồng Nghi Software có khả năng thích ứng với yêu cầu và thay đổi của dự án một cách nhanh
+                                chóng và hiệu quả. Có thể điều chỉnh quy trình phát triển, thời gian và nguồn lực theo
+                                nhu cầu của dự án.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cit-reasons-card">
+                        <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                            <img src="assets/img/icons/wcu-icon-2.png"
+                                alt="Biểu tượng phần mềm cho chất lượng sản phẩm">
+                            <h5>Chất Lượng sản phẩm</h5>
+                            <p>Hồng Nghi Software có quy trình kiểm thử và đánh giá chất lượng sản phẩm chặt chẽ, đảm
+                                bảo rằng các sản phẩm phần mềm đạt tiêu chuẩn cao nhất, đảm bảo tính hiệu quả và độ tin
+                                cậy cao.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cit-reasons-card">
+                        <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                            <img src="assets/img/icons/color-circle_6002129.png"
+                                alt="Biểu tượng demo cho sản phẩm demo">
+                            <h5>Có sẵn sản phẩm Demo</h5>
+                            <p>Triển khai rất nhiều module nghiệp vụ có tính chất phức tạp và để các công nghệ cao khách hàng được
+                                xem trực tiếp trước khi bàn demo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cit-reasons-card">
+                        <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                            <img src="assets/img/icons/payment_3110557.png"
+                                alt="Biểu tượng chi phí cho tiết kiệm chi phí">
+                            <h5>Tiết kiệm chi phí</h5>
+                            <p>Tận dụng các sản phẩm đã triển khai của Hồng Nghi Software để bảo vệ tối ưu chi phí sáng
+                                tạo phần mềm cho Khách hàng.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cit-reasons-card">
+                        <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                            <img src="assets/img/icons/programmer_4668324.png"
+                                alt="Biểu tượng hỗ trợ cho hỗ trợ sau triển khai">
+                            <h5>Hỗ trợ sau triển khai</h5>
+                            <p>Hồng Nghi Software thường cung cấp dịch vụ hỗ trợ sau triển khai, bao gồm bảo trì và cập
+                                nhật phần mềm để đảm bảo sự ổn định và hiệu quả sử dụng của ứng dụng.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cit-reasons-card">
+                        <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                            <img src="assets/img/icons/graphic-design_4668311.png"
+                                alt="Biểu tượng dịch vụ cho tập trung lĩnh vực chuyên môn">
+                            <h5>Tập trung lĩnh vực chuyên môn</h5>
+                            <p>Hồng Nghi Software có đội ngũ chuyên gia trong một số lĩnh vực cụ thể, cung cấp các giải
+                                pháp phù hợp với yêu cầu cụ thể của ngành công nghiệp.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cit-reasons-card">
+                        <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                            <img src="assets/img/icons/running_1248195.png"
+                                alt="Biểu tượng tích hợp cho phần mềm tích cực">
+                            <h5>Phần mềm tích cực</h5>
+                            <p>Phần mềm tích cực trực tiếp của khách hàng trước đó có thể là một chỉ báo tốt về chất
+                                lượng và hiệu suất của Hồng Nghi Software trước khi triển khai.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== SERVICE SECTION START ======-->
+    <div class="sotcox-service-section sotcox-service-section-page pt-20 pb-25">
+        <div class="custom-feature-section container my-5">
+            <div class="row justify-content-center">
+                <div class="col-xl-8">
+                    <div class="custom-section-title text-center mb-5">
+                        <h2 class="heading">SẢN PHẨM VÀ DỊCH VỤ CỦA HỒNG NGHI SOFTWARE</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-none-30">
+                <div class="col-xl-3 col-lg-6 col-md-6 mt-30">
+                    <div class="sotcox-service-item">
+                        <div class="icon">
+                            <img src="assets/img/icons/service-icon-1.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h4 class="title"><a href="viet-phan-mem.html">Thiết kế phần mềm theo yêu cầu</a></h4>
+                            <a href="viet-phan-mem.html" class="sotcox-inline-btn">
+                                <i class="far fa-arrow-right"></i>
+                                <i class="far fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 mt-30">
+                    <div class="sotcox-service-item">
+                        <div class="icon">
+                            <img src="assets/img/icons/service-icon-2.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h4 class="title"><a href="dich-vu-phan-cung.html">Dịch vụ phần cứng</a></h4>
+                            <a href="dich-vu-phan-cung.html" class="sotcox-inline-btn">
+                                <i class="far fa-arrow-right"></i>
+                                <i class="far fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 mt-30">
+                    <div class="sotcox-service-item">
+                        <div class="icon">
+                            <img src="assets/img/icons/service-icon-3.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h4 class="title"><a href="dich-vu-api.html">Kết nối API</a></h4>
+                            <a href="dich-vu-api.html" class="sotcox-inline-btn">
+                                <i class="far fa-arrow-right"></i>
+                                <i class="far fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 mt-30">
+                    <div class="sotcox-service-item">
+                        <div class="icon">
+                            <img src="assets/img/icons/service-icon-4.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h4 class="title"><a href="#">Tư vấn giải pháp</a></h4>
+                            <a href="#" class="sotcox-inline-btn">
+                                <i class="far fa-arrow-right"></i>
+                                <i class="far fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== SERVICE SECTION END ======-->
+
+    <!-- Why Us Section -->
+
+    <section class="bg-white text-dark py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">ƯU ĐIỂM NỔI BẬT CỦA DỊCH VỤ</h2>
+                <p class="text-muted">Chúng tôi cam kết mang đến giải pháp phần mềm hiệu quả, linh hoạt và tối ưu nhất
+                    cho doanh nghiệp của bạn.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Box 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                        <img src="assets/img/icons/achivement-4.png" class="mb-3" alt="Nhân sự" width="40">
+                        <h6 class="fw-bold">Nhân sự giàu kinh nghiệm</h6>
+                        <p class="text-secondary small">Đội ngũ chuyên môn cao, đáp ứng mọi yêu cầu kỹ thuật và nghiệp
+                            vụ một cách chuyên nghiệp.</p>
+                    </div>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                        <img src="assets/img/icons/service-details-icon-3.png" class="mb-3" alt="Quy trình" width="40">
+                        <h6 class="fw-bold">Quy trình chuyên nghiệp</h6>
+                        <p class="text-secondary small">Áp dụng quy trình bài bản để đảm bảo chất lượng sản phẩm và dịch
+                            vụ.</p>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                        <img src="assets/img/icons/wcu-icon-1.png" class="mb-3" alt="Tư vấn" width="40">
+                        <h6 class="fw-bold">Tư vấn tận tâm</h6>
+                        <p class="text-secondary small">Luôn đồng hành và đề xuất giải pháp phù hợp với nhu cầu thực tế
+                            của khách hàng.</p>
+                    </div>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                        <img src="assets/img/icons/service-icon-2.png" class="mb-3" alt="Bảo mật" width="40">
+                        <h6 class="fw-bold">Bảo mật thông tin</h6>
+                        <p class="text-secondary small">Áp dụng các biện pháp bảo mật hiện đại để bảo vệ dữ liệu của
+                            doanh nghiệp.</p>
+                    </div>
+                </div>
+
+                <!-- Box 5 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                        <img src="assets/img/icons/service-details-icon-2.png" class="mb-3" alt="Tiến độ" width="40">
+                        <h6 class="fw-bold">Đảm bảo tiến độ</h6>
+                        <p class="text-secondary small">Cam kết hoàn thành dự án đúng thời gian đã thống nhất với khách
+                            hàng.</p>
+                    </div>
+                </div>
+
+                <!-- Box 6 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                        <img src="assets/img/icons/service-icon-6.png" class="mb-3" alt="UI/UX" width="40">
+                        <h6 class="fw-bold">Giao diện chuẩn UI/UX</h6>
+                        <p class="text-secondary small">Thiết kế hiện đại, thân thiện, tối ưu trải nghiệm người dùng
+                            trên mọi thiết bị.</p>
+                    </div>
+                </div>
+
+                <!-- Box 7 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                        <img src="assets/img/icons/service-icon-7.png" class="mb-3" alt="Đa nền tảng" width="40">
+                        <h6 class="fw-bold">Đa nền tảng</h6>
+                        <p class="text-secondary small">Hoạt động mượt mà trên Web, Android, iOS, máy tính bảng, điện
+                            thoại.</p>
+                    </div>
+                </div>
+
+                <!-- Box 8 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="sotcox-service-item border p-4 rounded-4 h-100 text-center shadow-sm">
+                        <img src="assets/img/icons/service-details-icon-1.png" class="mb-3" alt="Công nghệ" width="40">
+                        <h6 class="fw-bold">Công nghệ mới nhất</h6>
+                        <p class="text-secondary small">Luôn cập nhật và áp dụng công nghệ hiện đại vào quy trình phát
+                            triển phần mềm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Why Us Section -->
+
+
+    <!--====== WORKFLOW SECTION START ======-->
+    <div class="sotcox-workflow-section theme-light-bg pb-40 pt-55">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="sotcox-section-heading text-center mb-60">
+                        <h2 class="heading">
+                            QUY TRÌNH THIẾT KẾ PHẦN MỀM THEO YÊU CẦU TẠI <br>HỒNG NGHI SOFTWARE
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0 mt-none-40">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mt-40">
+                    <div class="sotcox-workflow-box sotcox-workflow-box__1 text-center wow fadeInUp"
+                        data-wow-delay="0ms" data-wow-duration="800ms">
+                        <div class="icon">
+                            <img src="assets/img/icons/workflow-icon-1.png" alt="">
+                            <span class="count">01</span>
+                        </div>
+                        <div class="content">
+                            <h5 class="title">Thu thập yêu cầu</h5>
+                            <p>Trao đổi trực tiếp với khách hàng để hiểu rõ nhu cầu, quy trình hoạt động và mục tiêu sử
+                                dụng phần mềm. </p>
+                        </div>
+                        <div class="sotcox-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mt-40 wow fadeInUp" data-wow-delay="200ms"
+                    data-wow-duration="800ms">
+                    <div class="sotcox-workflow-box sotcox-workflow-box__2 active text-center">
+                        <div class="icon">
+                            <img src="assets/img/icons/workflow-icon-2.png" alt="">
+                            <span class="count">02</span>
+                        </div>
+                        <div class="content">
+                            <h5 class="title">Phân tích yêu cầu</h5>
+                            <p>Phân tích tính khả thi, đề xuất giải pháp phù hợp và thống nhất phạm vi tính năng, giao
+                                diện, dữ liệu đầu vào/đầu ra. </p>
+                        </div>
+                        <div class="sotcox-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mt-40 wow fadeInUp" data-wow-delay="400ms"
+                    data-wow-duration="800ms">
+                    <div class="sotcox-workflow-box sotcox-workflow-box__3 text-center">
+                        <div class="icon">
+                            <img src="assets/img/icons/workflow-icon-3.png" alt="">
+                            <span class="count">03</span>
+                        </div>
+                        <div class="content">
+                            <h5 class="title">Xây dựng tính năng</h5>
+                            <p>Tiến hành lập trình, thiết kế giao diện, kiểm thử tính năng theo yêu cầu thực tế và quy
+                                trình đã thống nhất với Khách hàng. </p>
+                        </div>
+                        <div class="sotcox-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mt-40">
+                    <div class="sotcox-workflow-box sotcox-workflow-box__4 text-center wow fadeInUp"
+                        data-wow-delay="600ms" data-wow-duration="800ms">
+                        <div class="icon">
+                            <img src="assets/img/icons/workflow-icon-4.png" alt="">
+                            <span class="count">04</span>
+                        </div>
+                        <div class="content">
+                            <h5 class="title">Xác nhận và bàn giao</h5>
+                            <p>Khách hàng kiểm tra, đóng góp chỉnh sửa. Sau khi thống nhất, chúng tôi tiến hành bàn giao
+                                và hướng dẫn sử dụng hệ thống. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== WORKFLOW SECTION END ======-->
+
+
+    <!--====== BRAND SECTION START ======-->
+    <!-- <div class="sotcox-brand-section pt-40 pb-55">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="sotcox-section-heading text-center mb-60">
+                        <span class="sub-heading">we serve all industries</span>
+                        <h2 class="heading">Top industries</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-none-30">
+                <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                    <div class="sotcox-brand-box sotcox-brand-box__1 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms">
+                        <div class="icon">
+                            <img src="assets/img/icons/brand-icon-1.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h6 class="title">Travel & Tourism</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                    <div class="sotcox-brand-box sotcox-brand-box__2 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">
+                        <div class="icon">
+                            <img src="assets/img/icons/brand-icon-2.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h6 class="title">Banking & Finance</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                    <div class="sotcox-brand-box sotcox-brand-box__3 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="800ms">
+                        <div class="icon">
+                            <img src="assets/img/icons/brand-icon-3.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h6 class="title">Media & Entertainment</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                    <div class="sotcox-brand-box sotcox-brand-box__4 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="800ms">
+                        <div class="icon">
+                            <img src="assets/img/icons/brand-icon-4.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h6 class="title">Hotels & Restaurant</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                    <div class="sotcox-brand-box sotcox-brand-box__5 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="800ms">
+                        <div class="icon">
+                            <img src="assets/img/icons/brand-icon-5.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h6 class="title">Healthcare Solution</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                    <div class="sotcox-brand-box sotcox-brand-box__6 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="800ms">
+                        <div class="icon">
+                            <img src="assets/img/icons/brand-icon-6.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h6 class="title">Elearning & Education</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                    <div class="sotcox-brand-box sotcox-brand-box__7 wow fadeInUp" data-wow-delay="700ms" data-wow-duration="800ms">
+                        <div class="icon">
+                            <img src="assets/img/icons/brand-icon-7.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h6 class="title">Web Development</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--====== BRAND SECTION END ======-->
+
+    <!--====== TESTIMONIAL SECTION START ======-->
+    <!-- <div class="sotcox-testimonial-section theme-light-bg pt-40 pb-55">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="sotcox-section-heading text-center mb-60">
+                        <h2 class="heading">Client’s success is our success</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="sotcox-testimonial-wrapper owl-carousel sotcox-slide-nav sotcox-slide-nav__style-2"
+                        data-testimonial-slider>
+                        <div class="sotcox-testimonial-item">
+                            <div class="thumb">
+                                <img src="assets/img/testimonial/testimonial-1.png" alt="">
+                                <span class="quote"><i class="fas fa-quote-left"></i></span>
+                            </div>
+                            <div class="content">
+                                <p>“ It uses a directory of over 20 latin words combine a half of the things you need
+                                    model sentence structure sgather 😊. ”</p>
+                                <h6 class="title mt-25">Leslie Alexander</h6>
+                                <span class="sub-title">Sale Development</span>
+                            </div>
+                        </div>
+                        <div class="sotcox-testimonial-item">
+                            <div class="thumb">
+                                <img src="assets/img/testimonial/testimonial-2.png" alt="">
+                                <span class="quote"><i class="fas fa-quote-left"></i></span>
+                            </div>
+                            <div class="content">
+                                <p>“ I am very thankful to Sotcox IT dedication for helping me grow my business! From
+                                    the time, I submitted my inquiry ✨. ” </p>
+                                <h6 class="title mt-25">Jorge Martinez Rumeu</h6>
+                                <span class="sub-title">CEO of Atomiun</span>
+                            </div>
+                        </div>
+                        <div class="sotcox-testimonial-item">
+                            <div class="thumb">
+                                <img src="assets/img/testimonial/testimonial-3.png" alt="">
+                                <span class="quote"><i class="fas fa-quote-left"></i></span>
+                            </div>
+                            <div class="content">
+                                <p>“ I have been working with Sotcox IT quite briefly on my personal Startup. I really
+                                    enjoyed working with 🤩 🤩. ” </p>
+                                <h6 class="title mt-25">Daniel Talbot</h6>
+                                <span class="sub-title">CTO, VM</span>
+                            </div>
+                        </div>
+                        <div class="sotcox-testimonial-item">
+                            <div class="thumb">
+                                <img src="assets/img/testimonial/testimonial-1.png" alt="">
+                                <span class="quote"><i class="fas fa-quote-left"></i></span>
+                            </div>
+                            <div class="content">
+                                <p>“ It uses a directory of over 20 latin words combine a half of the things you need
+                                    model sentence structure sgather 😊. ”</p>
+                                <h6 class="title mt-25">Leslie Alexander</h6>
+                                <span class="sub-title">Sale Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--====== TESTIMONIAL SECTION END ======-->
+
+    <!--====== ARTICLE SECTION START ======-->
+    <div class="sotcox-article-section pt-40 pb-55">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="sotcox-section-heading text-center mb-50">
+                        <h2 class="heading">TIN TỨC - SỰ KIỆN</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-none-30" id="article-list"></div>
+            <!-- Pagination -->
+            <div class="sotcox-pagination d-flex align-items-center justify-content-center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination" id="pagination"></ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!--====== ARTICLE SECTION END ======-->
+
+    <!--====== CONTACT INFO SECTION START ======-->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 p-4 text-center border">
+                    <!-- Header with icon and small title -->
+                    <div class="d-flex align-items-center justify-content-center mb-3">
+                        <img src="assets/img/icons/phone.png" alt="Icon" width="24" height="24" class="me-2">
+                        <span class="text-primary fw-semibold small">TƯ VẤN MIỄN PHÍ</span>
+                    </div>
+                    <h6 class="fw-bold">Đặt Lịch Tư Vấn Miễn Phí</h6>
+                    <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal">ĐẶT
+                        LỊCH</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 p-4 text-center border">
+                    <div class="d-flex align-items-center justify-content-center mb-3">
+                        <img src="assets/img/icons/envelope.png" alt="Icon" width="24" height="24" class="me-2">
+                        <span class="text-warning fw-semibold small">HỖ TRỢ</span>
+                    </div>
+                    <h6 class="fw-bold">Hỗ Trợ Nghiệp Vụ - Xử Lý Yêu Cầu Phát Sinh</h6>
+                    <a href="https://zalo.me/0903576159" class="btn btn-primary mt-3">Gửi yêu cầu <span></span></a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 p-4 text-center border">
+                    <div class="d-flex align-items-center justify-content-center mb-3">
+                        <img src="assets/img/icons/desk.png" alt="Icon" width="24" height="24" class="me-2">
+                        <span class="text-info fw-semibold small">DỊCH VỤ CHĂM SÓC</span>
+                    </div>
+                    <h6 class="fw-bold">Hỗ trợ khẩn cấp cấp?</h6>
+                    <div class="mt-3 fs-5 fw-bold text-dark">0903 576 159</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal Đặt lịch tư vấn -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg"> <!-- Thêm modal-lg để tăng kích thước -->
+            <div class="modal-content">
+                <form id="bookingForm">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bookingModalLabel">Đặt lịch tư vấn</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!-- Cột trái -->
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="company" class="form-label">Tên công ty</label>
+                                    <input type="text" class="form-control" name="company" required>
+                                    <div class="invalid-feedback">Vui lòng nhập tên công ty.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contact" class="form-label">Người đại diện</label>
+                                    <input type="text" class="form-control" name="contact" required>
+                                    <div class="invalid-feedback">Vui lòng nhập tên người đại diện.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="industry" class="form-label">Ngành nghề</label>
+                                    <input type="text" class="form-control" name="industry" required>
+                                    <div class="invalid-feedback">Vui lòng nhập ngành nghề.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="product" class="form-label">Sản phẩm/Dịch vụ</label>
+                                    <select class="form-select" name="product" required>
+                                        <option value="">-- Chọn --</option>
+                                        <option value="Phần mềm kế toán">Thiết kế phần mềm theo yêu cầu</option>
+                                        <option value="Phần mềm ERP">Dịch vụ phần cứng</option>
+                                        <option value="Phần mềm ERP">Kết nối API</option>
+                                        <option value="Dịch vụ tư vấn CNTT">Dịch vụ tư vấn CNTT</option>
+                                    </select>
+                                    <div class="invalid-feedback">Vui lòng chọn sản phẩm hoặc dịch vụ.</div>
+                                </div>
+                            </div>
+
+                            <!-- Cột phải -->
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="datetime" class="form-label">Thời gian hẹn gặp</label>
+                                    <input type="datetime-local" class="form-control" name="datetime" required>
+                                    <div class="invalid-feedback">Vui lòng chọn thời gian hẹn gặp.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="location" class="form-label">Địa điểm</label>
+                                    <input type="text" class="form-control" name="location" required>
+                                    <div class="invalid-feedback">Vui lòng nhập địa điểm.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Số điện thoại</label>
+                                    <input type="tel" class="form-control" name="phone" required>
+                                    <div class="invalid-feedback">Vui lòng nhập số điện thoại hợp lệ.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                    <div class="invalid-feedback">Vui lòng nhập email hợp lệ.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary w-50">Đặt lịch</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Cảm ơn -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="thankYouToast" class="toast align-items-center text-bg-success border-0" role="alert"
+            data-bs-autohide="true" data-bs-delay="3000">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Cảm ơn bạn đã đặt lịch. Chúng tôi sẽ liên hệ sớm nhất!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+    <!--====== CONTACT INFO SECTION END ======-->
+
+    <!--====== FOOTER START ======-->
+    <footer class="sotcox-footer theme-light-bg pt-50">
+        <div class="sotcox-copyright">
+            <div class="container ext-align-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-8 text-center">
+                        <p>Copyright &copy; <span id="copyright-date"></span> Hong Nghi AI, All Rights Reserved.</p>
+                        <p>Designed by HongNghi.ai</p>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <!--====== FOOTER END ======-->
+
+
+
+    <!--========= JS Here =========-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <!-- Add this in the head section or before closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('scrollTop').addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+
+    <!-- Floating Buttons -->
+    <div class="floating-icons">
+        <a href="tel:0903576159" class="icon" title="Gọi ngay">
+            <img src="assets/img/icons/phone-3.png">
+        </a>
+        <a href="https://zalo.me/0903576159" class="icon" title="Chat Zalo">
+            <img src="assets/img/icons/zalo-icon.jpg">
+        </a>
+        <div class="icon" id="scrollTop" title="Lên đầu trang" role="button" style="cursor:pointer">
+            <img src="assets/img/icons/top-up-icon.png">
+        </div>
+    </div>
+
+
+    
+
+    <script>
+        // Initialize WOW.js safely
+        function initWOW() {
+            if (typeof WOW !== 'undefined') {
+                new WOW().init();
+            } else {
+                console.warn('WOW.js is not loaded. Animations will be disabled.');
+            }
+        }
+
+        // Run after page load to ensure WOW.js is available
+        window.onload = function () {
+            initWOW();
+
+            class Pagination {
+                constructor(articles, itemsPerPage, currentPage = 1) {
+                    this.articles = articles; // Danh sách bài viết từ bên ngoài
+                    this.totalItems = articles.length;
+                    this.itemsPerPage = itemsPerPage;
+                    this.currentPage = currentPage;
+                    this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
+                    this.paginationElement = document.getElementById('pagination');
+                    this.articleListElement = document.getElementById('article-list');
+                    this.maxVisiblePages = 5;
+                }
+
+                // Render articles for current page
+                renderArticles() {
+                    const start = (this.currentPage - 1) * this.itemsPerPage;
+                    const end = start + this.itemsPerPage;
+                    const currentArticles = this.articles.slice(start, end);
+
+                    this.articleListElement.innerHTML = '';
+                    currentArticles.forEach((article, index) => {
+                        const delay = (index % 3) * 200; // Delay: 0ms, 200ms, 400ms for each row
+                        const articleElement = document.createElement('div');
+                        articleElement.className = 'col-xl-4 col-lg-6 mt-30';
+                        articleElement.innerHTML = `
+                            <div class="sotcox-article-item wow fadeInUp" data-wow-delay="${delay}ms" data-wow-duration="800ms">
+                                <div class="thumb mb-35">
+                                    <img src="${article.image}" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="meta-info">
+                                        <span class="date">${article.date}</span>
+                                    </div>
+                                    <h5 class="title border-effect">
+                                        <a href="${article.link}">${article.title}</a>
+                                    </h5>
+                                    <div class="article-cats"></div>
+                                </div>
+                            </div>
+                        `;
+                        this.articleListElement.appendChild(articleElement);
+                    });
+                    // Re-initialize WOW.js for new elements
+                    initWOW();
+                }
+
+                // Render pagination
+                render() {
+                    this.paginationElement.innerHTML = '';
+
+                    // Previous button
+                    const prevLi = document.createElement('li');
+                    prevLi.className = `page-item ${this.currentPage === 1 ? 'disabled' : ''}`;
+                    prevLi.innerHTML = `<a class="stocox-page-link" href="#0"><i class="fas fa-arrow-left"></i></a>`;
+                    prevLi.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        if (this.currentPage > 1) {
+                            this.currentPage--;
+                            this.render();
+                            this.renderArticles();
+                        }
+                    });
+                    this.paginationElement.appendChild(prevLi);
+
+                    // Page numbers
+                    const { startPage, endPage } = this.calculatePageRange();
+
+                    // First page and ellipsis
+                    if (startPage > 1) {
+                        this.addPageItem(1);
+                        if (startPage > 2) {
+                            this.addEllipsis();
+                        }
+                    }
+
+                    // Visible pages
+                    for (let i = startPage; i <= endPage; i++) {
+                        this.addPageItem(i);
+                    }
+
+                    // Last page and ellipsis
+                    if (endPage < this.totalPages) {
+                        if (endPage < this.totalPages - 1) {
+                            this.addEllipsis();
+                        }
+                        this.addPageItem(this.totalPages);
+                    }
+
+                    // Next button
+                    const nextLi = document.createElement('li');
+                    nextLi.className = `page-item ${this.currentPage === this.totalPages ? 'disabled' : ''}`;
+                    nextLi.innerHTML = `<a class="stocox-page-link" href="#0"><i class="fas fa-arrow-right"></i></a>`;
+                    nextLi.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        if (this.currentPage < this.totalPages) {
+                            this.currentPage++;
+                            this.render();
+                            this.renderArticles();
+                        }
+                    });
+                    this.paginationElement.appendChild(nextLi);
+
+                    // Render articles for current page
+                    this.renderArticles();
+                }
+
+                calculatePageRange() {
+                    let startPage = Math.max(1, this.currentPage - Math.floor(this.maxVisiblePages / 2));
+                    let endPage = Math.min(this.totalPages, startPage + this.maxVisiblePages - 1);
+
+                    if (endPage - startPage + 1 < this.maxVisiblePages) {
+                        startPage = Math.max(1, endPage - this.maxVisiblePages + 1);
+                    }
+
+                    return { startPage, endPage };
+                }
+
+                addPageItem(page) {
+                    const li = document.createElement('li');
+                    li.className = `page-item ${page === this.currentPage ? 'sotcox-active' : ''}`;
+                    li.innerHTML = `<a class="stocox-page-link" href="#0">${page}</a>`;
+                    li.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        this.currentPage = page;
+                        this.render();
+                        this.renderArticles();
+                    });
+                    this.paginationElement.appendChild(li);
+                }
+
+                addEllipsis() {
+                    const li = document.createElement('li');
+                    li.className = 'page-item disabled';
+                    li.innerHTML = `<span class="stocox-page-link">...</span>`;
+                    this.paginationElement.appendChild(li);
+                }
+            }
+
+
+            // Sample articles for testing
+            const articles = [
+                {
+                    title: 'Làm thế nào để triển khai ERP thành công?',
+                    image: 'assets/img/blog/tren-khai-erp.jpg',
+                    date: '28-02-2025',
+                    link: 'lam-the-nao-de-trien-khai-erp-thanh-cong.html'
+                },
+                {
+                    title: 'Tại sao doanh nghiệp cần triển khai ERP?',
+                    image: 'assets/img/blog/erp-2.jpg',
+                    date: '12-03-2024',
+                    link: 'tai-sao-doanh-nghiep-can-trien-khai-erp.html'
+                },
+                {
+                    title: 'Những khó khăn khi triển khai ERP',
+                    image: 'assets/img/blog/risk-erp.jpg',
+                    date: '12-02-2024',
+                    link: 'kho-khan-khi-trien-khai-erp.html'
+                },
+                {
+                    title: 'Tuỳ biến ERP- linh hoat hay rủi ro?',
+                    image: 'assets/img/blog/tuy-bien-erp.jpg',
+                    date: '20-03-2024',
+                    link: 'tuy-bien-erp-linh-hoat-hay-rui-ro.html'
+                },
+                {
+                    title: 'Chuẩn hoá quy trình trước khi triển khai ERP',
+                    image: 'assets/img/blog/chuan-hoa-quy-trinh.jpg',
+                    date: '25-03-2024',
+                    link: 'chuan-hoa-quy-trinh-truoc-khi-trien-khai-erp.html'
+                },
+                {
+                    title: 'Nên sử dụng phần mềm đóng gói hay phần mềm theo yêu cầu?',
+                    image: 'assets/img/blog/dong-goi-or-quy-trinh.jpg',
+                    date: '25-03-2024',
+                    link: 'phan-mem-dong-goi-hay-phan-mem-theo-yeu-cau.html'
+                },
+                {
+                    title: 'Những hiểu lầm về phần mềm ERP',
+                    image: 'assets/img/blog/nhung-hieu-nham-phan-mem-erp.jpg',
+                    date: '25-03-2024',
+                    link: 'nhung-hieu-lam-ve-phan-mem-theo-yeu-cau.html'
+                },
+                {
+                    title: 'Tư duy sản phẩm hay dự án',
+                    image: 'assets/img/blog/tu-duy-san-pham-hay-du-an.jpg',
+                    date: '25-03-2024',
+                    link: 'tu-duy-san-pham-hay-du-an.html'
+                },
+                {
+                    title: 'Quy trình phát triển phần mềm theo yêu cầu',
+                    image: 'assets/img/blog/quy-trinh-phat-trien-pm.png',
+                    date: '25-03-2024',
+                    link: 'quy-trinh-phat-trien-phan-mem-theo-yeu-cau.html'
+                }
+            ];
+
+            // Initialize pagination
+            const pagination = new Pagination(articles, 3, 1); // 3 articles per page
+            pagination.render();
+        };
+    </script>
+
+    <script src="assets/js/jquery-3.7.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/uikit.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/lightcase.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/waypoint.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/js-jquery.knob.js"></script>
+    <script src="assets/js/js-jquery.appear.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/hongnghi.js/setting.js" defer></script>
+    <script src="assets/js/hongnghi.js/dangkydungthu.js"></script>
+    <script src="assets/js/hongnghi.js/booking.js"></script>
+
+</body>
+
+</html>

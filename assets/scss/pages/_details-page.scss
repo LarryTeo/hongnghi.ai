@@ -1,0 +1,77 @@
+.sotcox-details-page {
+	.details-wrapper {
+		@include respond(lg) {
+			padding-right: 0px;
+		}
+	}
+	.details-thumb {
+		img {
+			border-radius: 10px;
+		}
+	}
+	p {
+		font-size: 18px;
+		line-height: 30px;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+	.portfolio-meta {
+		@include d-flex;
+		justify-content: space-between;
+		margin-top: -15px;
+		li {
+			font-size: 18px;
+			width: 25%;
+			margin-top: 15px;
+			@include respond(md) {
+				width: 50%;
+			}
+			@include respond(xs) {
+				width: 100%;
+			}
+			@include respond(sm) {
+				width: 50%;
+			}
+			.label {
+				font-weight: 700;
+				color: $dark;
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+.portfolio-details-carousel {
+	img {
+		border-radius: 10px;
+	}
+	.owl-dots {
+		@include d-flex(center, center);
+		margin-top: 60px;
+		div {
+			width: 7px;
+			height: 7px;
+			background: $theme-color-2;
+			border-radius: 50%;
+			margin: 0px 10px;
+			position: relative;
+			&::after {
+				@include after;
+				width: 14px;
+				height: 14px;
+				border: 1px solid $theme-color-2;
+				border-radius: 50%;
+				left: -3.5px;
+				top: -3.5px;
+			}
+			&.active {
+				width: 13px;
+				height: 13px;
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+}

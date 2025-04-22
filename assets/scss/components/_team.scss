@@ -1,0 +1,101 @@
+/* TEAM CSS START */
+.sotcox-team-section {
+    .owl-stage-outer {
+        overflow: visible;
+        padding-bottom: 10px;
+    }
+    position: relative;
+    .small-shape {
+		position: absolute;
+		&__1 {
+			left: 15%;
+			top: 10%;
+            animation: shapeDownLeft 2s linear infinite alternate;
+		}
+		&__2 {
+			left: auto;
+			right: 20%;
+			top: 8%;
+            animation: shapeTopLeft 2s linear infinite alternate;
+		}
+	}
+}
+.sotcox-team-item {
+    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.04);
+    padding: 40px;
+    border-radius: 10px;
+    .thumb {
+        margin: 0 auto;
+        width: 120px;
+        height: 120px;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+    .title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .sub-title {
+        font-size: 14px;
+        display: block;
+    }
+    .sotcox-social-links {
+        justify-content: center;
+        a {
+            width: 40px;
+            height: 40px;
+            @include d-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $theme-color-light;
+            border-radius: 50%;
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+            i {
+                @include transition(.4s);
+            }
+            .fa-facebook {
+                color: #3b5998;
+            }
+            .fa-twitter {
+                color: #1da1f2;
+            }
+            .fa-linkedin {
+                color: #0077b5;
+            }
+            .fa-instagram {
+                color: #e4405f;
+            }
+            &:hover {
+                i {
+                    color: $white;
+                }
+            }
+            &:nth-child(1):hover {
+                background: #3b5998;
+                border-color: #3b5998;
+            }
+            &:nth-child(2):hover {
+                background: #1da1f2;
+                border-color: #1da1f2;
+            }
+            &:nth-child(3):hover {
+                background: #0077b5;
+                border-color: #0077b5;
+            }
+            &:nth-child(4):hover {
+                background: #e4405f;
+                border-color: #e4405f;
+            }
+        }
+    }
+    .sotcox-btn {
+        font-weight: 400;
+        padding: 4px 30px;
+    }
+}
+/* TEAM CSS END */

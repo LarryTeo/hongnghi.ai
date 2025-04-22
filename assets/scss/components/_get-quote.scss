@@ -1,0 +1,83 @@
+/* GET-QUOTE CSS START */
+.sotcox-getquote-section {
+	.img-wrapper {
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 10px 0px 0px 10px;
+			@include respond(lg) {
+				border-radius: 10px 10px 0px 0px;
+			}
+		}
+	}
+	position: relative;
+	.small-shape {
+		position: absolute;
+		&__1 {
+			left: 10%;
+			top: 15%;
+			animation: shapeDownLeft 2s linear infinite alternate;
+		}
+		&__2 {
+			right: 20%;
+			top: 10%;
+			animation: shapeTopLeft 2s linear infinite alternate;
+		}
+		&__3 {
+			left: 12%;
+			bottom: 30%;
+			animation: shapeTopLeft 2s linear infinite alternate;
+		}
+		&__4 {
+			right: 8%;
+			bottom: 15%;
+			animation: shapeDownLeft 2s linear infinite alternate;
+		}
+	}
+}
+.sotcox-getquote-form-wrapper {
+	background: $theme-color;
+	padding: 60px;
+	padding-top: 50px;
+	border-radius: 0px 10px 10px 0px;
+	@include respond(lg) {
+		border-radius: 0px 0px 10px 10px;
+	}
+	@include respond(xxs) {
+		padding: 40px 35px;
+	}
+	form {
+		margin-top: -30px;
+	}
+	.sotcox-input-field {
+		label {
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: 10px;
+			text-transform: capitalize;
+			color: $white;
+			font-family: $heading-font;
+			letter-spacing: 0.02em;
+		}
+		input,
+		textarea {
+			background: #2377f3;
+			padding: 10px 20px;
+			color: #baeeff;
+			&::placeholder {
+				color: #baeeff;
+			}
+		}
+		textarea {
+			min-height: 100px;
+		}
+	}
+	.sotcox-btn {
+		background: $theme-color-2;
+		span {
+			background: $dark;
+		}
+	}
+}
+/* GET-QUOTE CSS END */

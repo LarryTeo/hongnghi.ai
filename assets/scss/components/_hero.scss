@@ -1,0 +1,324 @@
+/* HERO CSS START */
+.sotcox-hero-section {
+	position: relative;
+	overflow: hidden;
+	.shape {
+		right: 0;
+		bottom: 0px;
+		z-index: -1;
+		@include respond(laptop) {
+			right: -5%;
+			max-width: 50%;
+		}
+		&__2 {
+			@include respond(laptop) {
+				max-width: 55%;
+			}
+		}
+		@include respond(md) {
+			display: none;
+		}
+ 	}
+	.title {
+		font-size: 70px;
+		letter-spacing: -0.01em;
+		line-height: 115%;
+		@include respond(lg) {
+			font-size: 48px;
+		}
+		@include respond(xxs) {
+			font-size: 36px;
+		}
+	}
+	.inner-btns {
+		@include d-flex;
+		align-items: center;
+		.sotcox-btn {
+			margin-bottom: 0px;
+			margin-right: 20px;
+		}
+	}
+	.sotcox-social-links {
+		@include respond(lg) {
+			margin-top: 45px;
+			flex-wrap: wrap;
+		}
+		a {
+			@include respond(lg) {
+				margin-top: 10px;
+			}
+			&:not(:last-child) {
+				margin-right: 40px;
+				@include respond(lg) {
+					margin-right: 15px;
+				}
+			}
+			.fa-facebook-f {
+				color: #4064ac;
+			}
+			.fa-youtube {
+				color: #ff0000;
+			}
+			.fa-twitter {
+				color: #1da1f2;
+			}
+			.fa-linkedin {
+				color: #0077b5;
+			}
+		}
+	}
+	.inner-right {
+		background: #e3ebf8;
+		position: relative;
+		border-radius: 30px;
+		width: 520px;
+		min-height: 605px;
+		margin: 0 0 0 auto;
+		translate: 35px 0px;
+		@include respond(lg) {
+			width: 350px;
+			min-height: 420px;
+			translate: 0px 0px;
+		}
+		@include respond(md) {
+			margin: 0;
+			margin-bottom: 60px;
+		}
+		@include respond(xs) {
+			display: none;
+		}
+	}
+	.img-wrapper {
+		position: absolute;
+		bottom: 0;
+		left: -90px;
+		max-width: inherit;
+		@include respond(md) {
+			left: -60px;
+		}
+	}
+	.sotcox-video-wrapper {
+		span {
+			@include respond(lg) {
+				display: none;
+			}
+		}
+	}
+	&__style-2 {
+		padding-top: 250px;
+		padding-bottom: 140px;
+		position: relative;
+		@include respond(md) {
+			padding-top: 150px;
+		}
+		.inner-content {
+			position: relative;
+			z-index: 2;
+			.title {
+				color: $white;
+			}
+			p {
+				color: $white;
+			}
+			li {
+				color: $white;
+			}
+		}
+		.middle-img {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			translate: -50% 0px;
+			height: 100%;
+			@include respond(laptop) {
+				width: 980px;
+				text-align: center;
+			}
+			@include respond(md) {
+				display: none;
+			}
+			img {
+				height: 100%;
+			}
+		}
+		.sotcox-video-btn {
+			width: 138px;
+			height: 138px;
+			font-size: 30px;
+			position: absolute;
+			right: 95px;
+			translate: 0px -50%;
+			z-index: 2;
+			@include respond(md) {
+				position: relative;
+				right: 0;
+				translate: 0px 0px;
+				margin-bottom: 50px;
+				margin-right: 0px;
+				width: 100px;
+				height: 100px;
+				font-size: 18px;
+			}
+		}
+		.right-wrapper {
+			position: relative;
+		}
+		.sotcox-social-links {
+			position: absolute;
+			right: 80px;
+			top: 50%;
+			translate: 0px -50%;
+			flex-direction: column;
+			@include respond(lg) {
+				margin-top: 0px;
+				right: 45px;
+			}
+			@include respond(md) {
+				position: relative;
+				right: 0;
+				translate: 40px 0px;
+				margin-top: 50px;
+				flex-direction: row;
+			}
+			@include respond(sm) {
+				translate: 30px 0px;
+			}
+			@include respond(xs) {
+				translate: 15px 0px;
+			}
+			@include respond(xxs) {
+				flex-wrap: wrap;
+			}
+			a {
+				writing-mode: vertical-lr;
+				display: flex;
+    			flex-direction: row-reverse;
+				align-items: center;
+				@include respond(md) {
+					writing-mode: horizontal-tb;
+					flex-direction: row;
+				}
+				&:not(:last-child) {
+					margin-right: 0px;
+					margin-bottom: 80px;
+					@include respond(md) {
+						margin-bottom: 0px;
+						margin-right: 40px;
+					}
+				}
+				span {
+					margin-left: 0px;
+					color: $white;
+					margin-bottom: 15px;
+					@include respond(md) {
+						margin-bottom: 0px;
+						margin-left: 15px;
+					}
+				}
+			}
+		}
+	}
+	.small-shape {
+		position: absolute;
+		&__1 {
+			left: 49%;
+			top: 15%;
+			z-index: 1;
+			animation: shapeTopLeft 2s linear infinite alternate;
+			@include respond(md) {
+				left: 10%;
+				top: 10%;
+			}
+		}
+		&__2 {
+			left: 5%;
+			bottom: 10%;
+			animation: shapeDownLeft 2s linear infinite alternate;
+			@include respond(md) {
+				left: 10%;
+				bottom: 10%;
+			}
+		}
+		&__3 {
+			left: 30%;
+			bottom: 15%;
+			animation: shapeDownLeft 2s linear infinite alternate;
+			@include respond(md) {
+				left: 80%;
+				top: 20%;
+			}
+		}
+		&__4 {
+			left: 90%;
+			bottom: 10%;
+			animation: shapeDownLeft 2s linear infinite alternate;
+		}
+	}
+}
+
+.review-wrapper {
+	.item {
+		z-index: 2;
+		position: absolute;
+		left: -160px;
+		top: 60px;
+		width: auto;
+		padding: 15px;
+		padding-right: 50px;
+		@include d-flex;
+		align-items: center;
+		justify-content: flex-start;
+		border-radius: 12px;
+		background: $white;
+		animation: shapeDownLeft 2s linear infinite alternate;
+		box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07),
+			0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198),
+			0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275),
+			0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035),
+			0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
+			0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+			@include respond(lg) {
+				left: -230px;
+				top: -40px;
+			}
+			@include respond(md) {
+				left: auto;
+				right: -225px;
+			}
+		&:nth-child(2) {
+			animation: shapeTopLeft 2s linear infinite alternate;
+			top: auto;
+			bottom: -10px;
+			left: -120px;
+			@include respond(lg) {
+				left: -190px;
+			}
+			@include respond(md) {
+				left: auto;
+				right: -180px;
+			}
+		}
+		.icon {
+			margin-right: 18px;
+		}
+		.content {
+			h6 {
+				font-size: 14px;
+				font-weight: 600;
+			}
+			p {
+				color: #818181;
+				i {
+					color: #febb43;
+				}
+				span {
+					color: $dark;
+					margin: 0px 5px;
+					font-weight: 700;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
+/* HERO CSS END */

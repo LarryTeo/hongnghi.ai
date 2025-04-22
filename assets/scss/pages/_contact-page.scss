@@ -1,0 +1,28 @@
+/* CONTACT PAGE CSS START */
+.mb-none-120 {
+    margin-bottom: -123px;
+}
+.sotcox-map-section {
+    iframe {
+        min-height: 650px;
+        width: 100%;
+        filter: grayscale(100%) invert(100%);
+        border: none;
+        @include respond(xs) {
+            min-height: 450px;
+        }
+    }
+}
+.ajax-response {
+    &.error {
+        background: red;
+    }
+    &.success {
+        background: green;
+    }
+    margin-top: 10px;
+    color: $white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/* CONTACT PAGE CSS END */

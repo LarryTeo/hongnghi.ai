@@ -1,0 +1,83 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Sotcox - IT solutions & services company HTML5 Template
+    Template URI: https://themealpha.dev/
+    Description: IT solutions & services company HTML5 Template
+    Author: amdadulj
+    Author URI: https://themeforest.net/user/amdadulj
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+	* Theme default CSS
+
+-----------------------------------------------------------------------------------*/
+// abstracts scss
+@import
+	"abstracts/mixins",
+	"abstracts/variables";
+
+// base scss
+@import
+	"base/base",
+	"base/spacing",
+	"base/typography",
+	"base/overlay";
+
+// layout scss
+@import
+	"layout/header",
+	"layout/navigation";
+
+// components scss
+@import
+	"components/preloader",
+	"components/buttons",
+	"components/search-popup",
+	"components/side-info",
+	"components/social-links",
+	"components/owl-nav",
+	"components/hero",
+	"components/card",
+	"components/service",
+	"components/workflow",
+	"components/project",
+	"components/wcu",
+	"components/brand",
+	"components/testimonial",
+	"components/post-grid",
+	"components/newsletter",
+	"components/contact-info",
+	"components/contact-info",
+	"components/achivement",
+	"components/team",
+	"components/get-quote",
+	"components/breadcrumb",
+	"components/faq",
+	"components/mission",
+	"components/pricing",
+	"components/support",
+	"components/blog",
+	"components/sidebar",
+	"components/blog-details",
+	"components/blog-comment",
+	"components/pagination",
+	"components/about";
+
+// pages scss
+@import
+	"pages/details-page",
+	"pages/team-details-page",
+	"pages/service-details-page",
+	"pages/contact-page";
+
+// layout scss
+@import "layout/footer";
+
+// * {
+// 	box-sizing: border-box;
+// 	background: rgb(0 100 0 / 0.1) !important;
+// }

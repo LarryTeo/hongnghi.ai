@@ -1,0 +1,404 @@
+/* blog sidebar css */
+.blog_sidebar  {
+	@include respond(lg) {
+		&.mt-none-60 {
+			margin-top: 0;
+		}
+	}
+}
+
+.blog_widget .wp-block-search__label,
+.blog_widget .wp-block-group h2,
+.blog-widget-title {
+	position: relative;
+	margin-bottom: 35px;
+	font-size: 24px;
+	text-transform: capitalize;
+	position: relative;
+	padding-left: 28px;
+	&::before,
+	&::after {
+		@include after;
+		width: 17px;
+		height: 17px;
+		background: $theme-color-light;
+		border-radius: 50%;
+		left: 0;
+		top: 50%;
+		translate: 0px -50%;
+	}
+	&::after {
+		width: 11px;
+		height: 11px;
+		background: $theme-color;
+		left: 3px;
+	}
+	a {
+		color: $dark;
+	}
+}
+
+.blog_widget {
+	border: 1px solid $theme-color-light;
+	padding: 40px 35px;
+	padding-top: 35px;
+	border-radius: 10px;
+	@include respond(xxs) {
+		padding: 35px 25px;
+		padding-top: 30px;
+	}
+	.abount-info {
+		img {
+			max-width: 140px;
+			min-height: 140px;
+			object-fit: cover;
+		}
+		text-align: center;
+		@include d-flex;
+		align-items: center;
+		flex-direction: column;
+		.name {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		p {
+			line-height: 26px;
+		}
+	}
+	.sotcox-social-links {
+		margin-top: 10px;
+		a {
+			font-size: 14px;
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+	}
+	&.widget_categories {
+		ul {
+			li {
+				overflow: hidden;
+				border: 1px solid $theme-color-light;
+				border-radius: 5px;
+				padding: 9px 15px;
+				font-size: 14px;
+				@include transition(0.4s);
+				&:not(:last-child) {
+					margin-bottom: 15px;
+				}
+				a {
+					font-size: 18px;
+					@include transition(0.4s);
+					font-weight: 700;
+					color: $dark;
+				}
+				span {
+					font-size: 18px;
+					@include transition(0.4s);
+					float: right;
+					font-weight: 700;
+					color: $dark;
+				}
+				&:hover {
+					a {
+						color: $dark;
+					}
+					span {
+						color: $dark;
+					}
+				}
+				&:hover {
+					color: $theme-color;
+					a,
+					span {
+						color: $theme-color;
+					}
+				}
+			}
+		}
+	}
+	.sotcox-input-field {
+		margin-top: -20px;
+		input,
+		textarea {
+			padding: 10px 0px;
+			padding-bottom: 15px;
+			border: none;
+			border-bottom: 1px solid $theme-color-light;
+			margin-top: 20px;
+			box-shadow: none;
+			border-radius: 0px;
+			&:focus {
+				border-color: $dark;
+			}
+		}
+		textarea {
+			min-height: auto;
+		}
+	}
+	.contact-info {
+		li {
+			font-size: 15px;
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+			span {
+				font-weight: 600;
+				color: $dark;
+			}
+		}
+	}
+	.sotcox-social-links {
+		a {
+			width: 40px;
+			height: 40px;
+			@include d-flex(center, center);
+			border-radius: 50%;
+			background: $theme-color-2;
+			color: $white;
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+			&:hover {
+				background: $theme-color;
+			}
+		}
+	}
+}
+
+.sotcox-popular-feeds {
+	.item {
+		flex-wrap: wrap;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		.thumb {
+			margin-right: 20px;
+			width: 80px;
+			border-radius: 10px;
+			position: relative;
+			@include respond(xxs) {
+				margin-right: 0px;
+				margin-bottom: 20px;
+			}
+			img {
+				border-radius: 10px;
+				margin-bottom: 0px;
+			}
+		}
+		.content {
+			width: calc(100% - 160px);
+			@include respond(xxs) {
+				width: 100%;
+			}
+			.title {
+				font-size: 16px;
+				font-weight: 400;
+				text-transform: capitalize;
+				line-height: 30px;
+				a {
+					background-size: 0% 1px;
+					&:hover {
+						background-size: 100% 1px;
+					}
+				}
+			}
+			.date {
+				font-size: 14px;
+				display: block;
+				margin-bottom: 5px;
+				text-transform: uppercase;
+				font-weight: 700;
+				letter-spacing: 0.14em;
+				color: $dark;
+			}
+		}
+	}
+}
+
+/* shop sidebar css  */
+.blog__sidebar {
+	&--shop {
+		padding-right: 25px;
+		@include respond(biglg) {
+			padding-right: 0px;
+			margin-top: 40px;
+		}
+		.price_slider_amount {
+			.button {
+				font-size: 12px !important;
+				padding: 12px 20px !important;
+				padding-bottom: 10px !important;
+			}
+		}
+		.ui-slider-horizontal {
+			height: 3px !important;
+			margin-bottom: 25px !important;
+		}
+		.ui-widget-content {
+			background-color: $theme-color-light !important;
+			border-radius: 0px;
+		}
+		.ui-slider-range {
+			background-color: $dark !important;
+		}
+		.ui-slider-handle {
+			width: 12px !important;
+			height: 12px !important;
+			border: 3px solid $dark;
+			background-color: $white !important;
+		}
+	}
+}
+
+// search widget css
+.search-widget {
+	div {
+		position: relative;
+	}
+	input {
+		width: 100%;
+		padding: 12px 20px;
+		@include placeholder($pera-color);
+		padding-right: 70px;
+		font-size: 16px;
+		border: 1px solid $theme-color-light;
+		border-radius: 5px;
+		&:focus {
+			border-color: $dark;
+		}
+	}
+	button {
+		font-size: 16px;
+		@include d-flex;
+		align-items: center;
+		justify-content: center;
+		color: $pera-color;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		translate: -15px -50%;
+	}
+}
+
+// insta widget css
+.sotcox-insta-posts {
+	@include d-flex();
+	align-items: center;
+	margin-left: -5px;
+	margin-top: -5px;
+	.item {
+		@include transition(0.4s);
+		width: calc(33.3333%);
+		position: relative;
+		padding: 5px;
+		img {
+			border-radius: 10px;
+			width: 100%;
+		}
+		&:hover {
+			.sotcox-zoom-btn {
+				opacity: 1;
+				visibility: visible;
+				translate: -50% -50%;
+			}
+		}
+	}
+}
+
+.sotcox-devider {
+	border-bottom: 1px solid $theme-color-light;
+}
+
+// service sidebar css
+.service-sidebar {
+	.blog_widget {
+		border: none;
+		background: $theme-color-light;
+        &.widget_categories {
+            ul {
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                    .count {
+                        float: left;
+                        margin-right: 20px;
+                    }
+                    position: relative;
+                    padding: 0px;
+                    border: none;
+                    &::after {
+                        @include after;
+                        content: "\f061";
+                        font-family: "Font Awesome 5 Pro";
+                        width: auto;
+                        height: auto;
+                        left: auto;
+                        right: 0px;
+                        top: 50%;
+                        translate: 0% -50%;
+                        font-weight: 700;
+                        color: $dark;
+                    }
+                }
+            }
+        }
+	}
+	.wp-block-search__label,
+	.wp-block-group h2,
+	.blog-widget-title {
+		&::before,
+		&::after {
+			background: #679af6;
+		}
+		&::after {
+			background: $theme-color;
+		}
+	}
+    .sotcox-input-field {
+        textarea,
+        input {
+            background: transparent;
+            border-color: #d4e5ff;
+            &::placeholder {
+                color: #c3cad5;
+            }
+            &:focus {
+                border-color:#A1C0EE;
+                &::placeholder {
+                    color: #73747D;
+                }
+            }
+        }
+    }
+    .widget-btns {
+        a {
+            display: block;
+            border-radius: 5px;
+            margin-bottom: 0px;
+			@include respond(xxs) {
+				padding: 15px 25px;
+			}
+            i {
+                position: absolute;
+                top: 50%;
+                right: 40px;
+                translate: 0% -50%;
+				@include respond(xxs) {
+					display: none;
+				}
+            }
+            &:nth-child(2) {
+                background: $theme-color-2;
+                span {
+                    background: $theme-color;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

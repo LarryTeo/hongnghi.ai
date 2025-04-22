@@ -1,0 +1,186 @@
+/* PROJECT CSS START */
+
+.sotcox-project-section {
+    position: relative;
+    .small-shape {
+		position: absolute;
+		&__1 {
+			left: 4%;
+			top: 10%;
+            animation: shapeDownLeft 2s linear infinite alternate;
+		}
+		&__2 {
+			left: auto;
+			right: 8%;
+			top: 10%;
+            animation: shapeTopLeft 2s linear infinite alternate;
+		}
+		&__3 {
+			left: 6%;
+			top: auto;
+			bottom: 10%;
+            animation: shapeTopLeft 2s linear infinite alternate;
+		}
+		&__4 {
+			left: auto;
+            right: 8%;
+			top: auto;
+			bottom: 12%;
+            animation: shapeDownLeft 2s linear infinite alternate;
+		}
+	}
+    &__style-2 {
+        .content-left-wrapper {
+            border: 1px solid $theme-color-light;
+            padding: 7px;
+            text-align: center;
+            border-radius: 40px;
+        }
+    }
+}
+.sotcox-project-wrapper {
+    @include respond(lg) {
+        margin-top: 60px;
+    }
+}
+.sotcox-project-filter {
+    gap: 10px;
+    flex-wrap: wrap;
+    li {
+        font-family: $heading-font;
+        font-size: 14px;
+        border-radius: 5px;
+        padding: 1px 13px;
+        border: 1px solid #E6EEFB;
+        cursor: pointer;
+        text-transform: capitalize;
+        @include transition(0.4s);
+        color: #bbc1ce;
+        &.active,
+        &:hover {
+            background: $theme-color-2;
+            color: $white;
+            border-color: $theme-color-2;
+        }
+    }
+    &__style-2 {
+        justify-content: center;
+        gap: 0px;
+        li {
+            border-radius: 40px;
+            color: $dark;
+            padding: 7px 40px;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-color: transparent;
+            &:not(:last-child) {
+                margin-right: 10px;
+                @include respond(xxs) {
+                    margin-right: 0px;
+                }
+            }
+            &:hover,
+            &.active {
+                background: $theme-color;
+                border-color: $theme-color;
+            }
+        }
+    }
+}
+.sotcox-project-item {
+    position: relative;
+    .thumb {
+        img {
+            border-radius: 10px;
+            width: 100%;
+        }
+    }
+    .content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: $white;
+        padding: 20px 0px;
+        padding-bottom: 15px;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(0.4s);
+        .title {
+            font-size: 20px;
+            text-transform: capitalize;
+            margin-bottom: 2px;
+            a {
+                color: $dark;
+                font-family: $heading-font;
+            }
+        }
+        .cat {
+            color: $theme-color;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+    .inline-btn {
+        width: 41px;
+        height: 41px;
+        border: 1px solid #E6EEFB;
+        border-radius: 50%;
+        color: $dark;
+        @include d-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        translate: 0px -50%;
+        transform: rotate(-45deg);
+        &:hover {
+            background: $theme-color;
+            color: $white;
+            border-color: $theme-color;
+        }
+    }
+    &:hover {
+        .content {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__style-2 {
+        .thumb {
+            img {
+                border-radius: 0px 0px 10px 10px;
+            }
+        }
+        .content {
+            border-radius: 10px 10px 0px 0px;
+            position: relative;
+            padding: 35px 40px;
+            padding-bottom: 38px;
+            opacity: 1;
+            visibility: visible;
+            border: 1px solid $theme-color-light;
+            border-bottom: 0px;
+            @include respond(xxs) {
+                padding: 25px 20px;
+                padding-bottom: 28px;
+            }
+            .title {
+                font-size: 24px;
+                padding-right: 80px;
+            }
+        }
+        .inline-btn {
+            font-size: 24px;
+            height: 61px;
+            width: 61px;
+            right: 32px;
+            @include respond(xxs) {
+                right: 20px;
+            }
+        }
+    }
+}
+/* PROJECT CSS END */

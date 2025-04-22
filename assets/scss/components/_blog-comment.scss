@@ -1,0 +1,170 @@
+/* comment css */
+.comment-respond,
+.post-comments {
+	.sotcox-title-uppercase {
+		margin-bottom: 15px;
+	}
+}
+.sotcox-comment-box {
+	padding-top: 40px;
+	.comment-avatar {
+		float: left;
+		img {
+			margin-right: 20px;
+			width: auto;
+			border-radius: 50%;
+			@include respond(xxs) {
+				margin-right: 0px;
+				margin-bottom: 20px;
+			}
+		}
+		@include respond(xxs) {
+			float: none;
+		}
+	}
+	.avatar-name {
+		a {
+			text-transform: capitalize;
+			font-weight: 700;
+			font-size: 18px;
+			color: $dark;
+			font-family: $heading-font;
+		}
+	}
+	.date {
+		color: $theme-color-2;
+	}
+	.comment-desc {
+		p {
+			line-height: 26px;
+		}
+		a {
+			color: inherit;
+		}
+	}
+	.bottom {
+		@include d-flex;
+		align-items: center;
+		margin-top: 15px;
+		a,
+		span {
+			font-size: 12px;
+			color: $dark;
+			font-weight: 700;
+			text-transform: uppercase;
+			line-height: 100%;
+		}
+		a {
+			color: $theme-color;
+			position: relative;
+			padding-left: 12px;
+			&::after {
+				@include after;
+				width: 2px;
+				height: 2px;
+				background: $dark;
+				left: 4px;
+				top: 1px;
+			}
+		}
+	}
+}
+
+.sotcox-commentform-wrapper {
+	background: $theme-color-light;
+	padding: 40px 50px;
+	padding-bottom: 50px;
+	border-radius: 10px;
+	@include respond(xxs) {
+		padding: 35px 25px;
+		padding-bottom: 40px;
+	}
+	p {
+		font-size: 14px;
+	}
+	.sotcox-btn {
+		margin-bottom: 0px;
+        @include respond(xxs) {
+            padding: 15px 24px;
+        }
+	}
+}
+
+.sotcox-input-field {
+	label {
+		font-size: 20px;
+		font-family: $heading-font;
+		color: $dark;
+		text-transform: capitalize;
+		font-weight: 700;
+		margin-bottom: 12px;
+	}
+	textarea,
+	input {
+		background: $white;
+		padding: 15px 20px;
+		&:focus {
+			border-color: $dark;
+		}
+	}
+	textarea {
+		min-height: 150px;
+	}
+}
+
+.logged-in-as {
+	margin-bottom: 20px;
+	a {
+		color: $pera-color;
+		&:hover {
+			color: $theme-color;
+		}
+	}
+}
+
+.logged-in .sotcox-btn__full {
+	width: auto;
+	i {
+		margin-left: 10px;
+	}
+}
+
+.sotcox-has-comment {
+	margin-top: 10px;
+}
+
+.latest__comments {
+	.comment-respond {
+		margin-top: 10px;
+	}
+	ul {
+		ul {
+			padding-left: 110px;
+			list-style: none;
+			@include respond(xxs) {
+				padding-left: 15px;
+			}
+		}
+	}
+}
+
+.post-comments {
+	.sotcox-title-uppercase {
+		small {
+			a {
+				color: inherit;
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+.not-logged {
+	.sotcox-form-field {
+		textarea {
+			@include respond(biglg) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

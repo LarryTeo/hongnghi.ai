@@ -1,0 +1,1250 @@
+<!doctype html>
+<html class="no-js" lang="vi">
+
+<head>
+
+    <!--========= Required meta tags =========-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <!-- Meta tags cho hiển thị preview đầy đủ -->
+    <meta property="og:title" content="Hồng Nghi - Giải pháp chuyển đổi số bền vững" />
+    <meta property="og:description" content="Với kinh nghiệm thực tế, chúng tôi mong muốn chia sẻ giải pháp và cách làm hiệu quả, giúp doanh nghiệp chuyển đổi số một cách bền vững và thực tiễn." />
+    <meta property="og:image" content="https://hongnghi.ai/assets/img/home/home-page-2.png" />
+    <meta property="og:url" content="https://hongnghi.ai/" />
+    <meta property="og:type" content="website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--====== Title ======-->
+    <title>Hống Nghi - Thiết Kế Phần Mềm Theo Yêu Cầu</title>
+
+    <!--====== Favicon ======-->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="images/x-icon">
+
+    <!--====== CSS Here ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/lightcase.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/ukit.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 900px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .popup-body {
+            display: flex;
+        }
+
+        .popup-left {
+            width: 65%;
+            padding-right: 20px;
+        }
+
+        .popup-right {
+            width: 35%;
+            padding-left: 20px;
+            border-left: 1px solid #ccc;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-section {
+            margin-bottom: 3cm;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close {
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .popup.h2 {
+            white-space: nowrap;
+            margin: 0;
+        }
+
+        .floating-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .icon {
+            width: 50px;
+            /* Đảm bảo tất cả icon có cùng kích thước */
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.2s;
+            position: relative;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+        .icon img {
+            width: 60%;
+            /* Giữ kích thước ảnh bên trong đồng đều */
+            height: 60%;
+            object-fit: contain;
+        }
+
+        .ping {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(0, 123, 255, 0.5);
+            -webkit-animation: ping 1.2s ease-in-out infinite both;
+            animation: ping 1.2s ease-in-out infinite both;
+        }
+
+        /* Animation */
+        @-webkit-keyframes ping {
+            0% {
+                -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+                opacity: 1;
+            }
+
+            50% {
+                -webkit-transform: scale(1.5);
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+
+            100% {
+                -webkit-transform: scale(2.5);
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes ping {
+            0% {
+                -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+                opacity: 1;
+            }
+
+            50% {
+                -webkit-transform: scale(1.5);
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+
+            100% {
+                -webkit-transform: scale(2.5);
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        .modal-body .form-label {
+            font-weight: 500;
+        }
+
+        .modal-body .form-control,
+        .modal-body .form-select {
+            margin-bottom: 8px;
+        }
+
+        .toast-container {
+            z-index: 9999;
+        }
+
+        .toast {
+            min-width: 300px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+        }
+
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+
+        .form-control.is-invalid,
+        .form-select.is-invalid {
+            border-color: #dc3545;
+            background-image: none;
+        }
+
+        .invalid-feedback {
+            font-size: 0.875em;
+            display: none;
+        }
+
+        .modal-lg {
+            max-width: 750px;
+            /* Điều chỉnh chiều rộng theo ý muốn */
+        }
+
+        #scrollTop {
+            cursor: pointer;
+            z-index: 9999;
+            /* đảm bảo nổi lên trên */
+        }
+
+       
+    </style>
+
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--====== HEADER START ======-->
+    <div id="sotcox-loadding" class="sotcox-loader">
+        <div class="sotcox-spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!--====== HEADER END ======-->
+
+    <!--====== HEADER START ======-->
+    <header class="sotcox-header pt-50 pb-50" data-uk-sticky="top: 250; animation: uk-animation-slide-top;">
+        <div class="container-fluid sotcox-container__fluid">
+            <div class="row">
+                <div class="col-xl-10 col-lg-4 col-sm-6 col-7 align-self-center">
+                    <div class="sotcox-logo-menu-wrapper">
+                        <a href="trang-chu.html" class="sotcox-logo">
+                            <img src="assets/img/logo/logo.png" alt="LOGO">
+                        </a>
+                        <div class="sotcox-menu-wrapper">
+                            <div class="sotcox-main-menu">
+                                <nav id="sotcox-navbar">
+                                    <ul>
+                                        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                                        <li><a href="san-pham.html">Sản phẩm - Dịch vụ</a></li>
+                                        <li><a href="tin-tuc.html">Tin tức - Sự kiện</a></li>
+                                        <li><a href="lien-he.html">Liên hệ</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!--====== formTrial ======-->
+                            <!-- Nút mở form -->
+                            <a onclick="openPopup()" class="sotcox-btn">Dùng thử miễn phí >> <span></span></a>
+
+                            <!-- Popup Form -->
+                            <div class="popup" id="trialForm">
+                                <div class="popup-content">
+                                    <div class="popup-header">
+                                        <h2>Đăng ký dùng thử miễn phí</h2>
+                                        <span class="close" onclick="closePopup()">&times;</span>
+                                    </div>
+                                    <div class="popup-body row">
+                                        <div class="col-md-7 popup-left">
+                                            <form id="trialFormElement">
+                                                <div class="form-group mb-3">
+                                                    <input type="text" name="contact" class="form-control"
+                                                        placeholder="Họ tên của bạn*" required>
+                                                    <div class="invalid-feedback">Vui lòng nhập họ tên.</div>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <input type="tel" name="phone" class="form-control"
+                                                        placeholder="Số điện thoại của bạn*" required>
+                                                    <div class="invalid-feedback">Số điện thoại không hợp lệ.</div>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <input type="email" name="email" class="form-control"
+                                                        placeholder="Email công việc*" required>
+                                                    <div class="invalid-feedback">Email không hợp lệ.</div>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <select name="location" class="form-select" required>
+                                                        <option value="">Tỉnh/Thành phố bạn đang sinh sống*</option>
+                                                        <option value="Hà Nội">Hà Nội</option>
+                                                        <option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
+                                                        <option value="TP. Hồ Chí Minh">Khu vực khác</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">Vui lòng chọn tỉnh/thành.</div>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <input type="text" name="adress" class="form-control"
+                                                        placeholder="Địa chỉ chi tiết của bạn">
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <select name="product" class="form-select" required>
+                                                        <option value="">Chọn sản phẩm/dịch vụ bạn đang quan tâm*</option>
+                                                        <option value="ERP">Thiết kế phần mềm theo yêu cầu</option>
+                                                        <option value="ERP">Dịch vụ phần cứng</option>
+                                                        <option value="ERP">Dịch vụ API</option>
+                                                        <option value="ERP">Dịch vụ tự vấn CNTT</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">Vui lòng chọn sản phẩm/dịch vụ</div>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <textarea name="note" class="form-control"
+                                                        placeholder="Ghi chú/Lời nhắn của bạn"></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary w-100">Đăng ký</button>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-5 popup-right ps-4">
+                                            <div class="contact-section mb-4">
+                                                <img src="assets/img/icons/support-2.png" alt="Phone Icon" class="mb-2">
+                                                <h5>Gọi qua Hotline</h5>
+                                                <p><strong>0903 576 159</strong></p>
+                                            </div>
+                                            <div class="contact-section">
+                                                <img src="assets/img/icons/support-3.png" alt="Mail Icon" class="mb-2">
+                                                <h5>Gửi Email cho chúng tôi</h5>
+                                                <p><strong>sale@hongnghi.ai</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Toast cảm ơn -->
+                            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                <div id="trialToast" class="toast align-items-center text-bg-success border-0"
+                                    role="alert" data-bs-delay="3000">
+                                    <div class="d-flex">
+                                        <div class="toast-body">
+                                            Cảm ơn bạn đã đăng ký dùng thử. Chúng tôi sẽ liên hệ sớm nhất!
+                                        </div>
+                                        <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                                            data-bs-dismiss="toast"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Toast-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-8 col-sm-6 col-5 align-self-center">
+                    <div class="right-element">
+                        <ul class="list-unstyled d-flex align-items-center">
+                            <li class="sideinfo-trigger" data-sideinfo-trigger>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--====== HEADER END ======-->
+
+    <!--====== OVERLAY START ======-->
+    <div class="sotcox-overlay"></div>
+    <!--====== OVERLAY END ======-->
+
+    <!--====== SEARCH POPUP START ======-->
+    <div class="search-popup">
+        <div class="color-layer"></div>
+        <button class="close-search"><span class="far fa-arrow-up"></span></button>
+        <form method="post" action="tin-tuc.html">
+            <div class="form-group">
+                <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+                <button type="submit"><i class="far fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!--====== SEARCH POPUP END ======-->
+
+    <!--====== SIDE INFO FOR MOBILE START ======-->
+    <aside class="side-info-wrapper mm-only">
+        <nav>
+            <div class="nav" id="nav-tab" role="tablist">
+                <a class="nav-link active" id="menu-tab-1-tab" data-bs-toggle="tab" href="#menu-tab-1" role="tab"
+                    aria-controls="menu-tab-1" aria-selected="true">Menu</a>
+                <a class="nav-link" id="menu-tab-2-tab" data-bs-toggle="tab" href="#menu-tab-2" role="tab"
+                    aria-controls="menu-tab-2" aria-selected="false">Info</a>
+            </div>
+        </nav>
+        <div class="side-info__wrapper d-flex align-items-center justify-content-between">
+            <div class="side-info__logo">
+                <a href="trang-chu.html">
+                    <img src="assets/img/logo/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="side-info__close">
+                <a href="javascript:void(0);"><i class="far fa-times"></i></a>
+            </div>
+        </div>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="menu-tab-1" role="tabpanel"
+            aria-labelledby="menu-tab-1-tab">
+            <div class="sotcox-mobile-menu"></div>
+            </div>
+            <div class="tab-pane fade" id="menu-tab-2" role="tabpanel" aria-labelledby="menu-tab-2-tab">
+                <div class="side-info">
+                    <div class="side-info__content mb-35">
+                        <h4 class="title mb-10">Về chúng tôi</h4>
+                        <p>Là thành viên của Công ty TNHH DV TM XNK Hồng Nghi, chúng tôi được thành lập sau hành trình
+                            số
+                            hóa thành công nội bộ. Với kinh nghiệm thực tế, chúng tôi mong muốn chia sẻ giải pháp và
+                            cách làm
+                            hiệu quả, giúp doanh nghiệp chuyển đổi số một cách bền vững và thực tiễn.</p>
+                        <a class="sotcox-btn sotcox-btn__small mt-20" href="lien-he.html">Liên hệ ngay
+                            <span></span></a>
+                    </div>
+                    <div class="contact__info--wrapper mt-15">
+                        <h4 class="title mb-15">Liên hệ với chúng tôi</h4>
+                        <ul class="contact__info list-unstyled">
+                            <li>
+                                <span><i class="fas fa-map-marker-alt"></i></span>
+                                <p>7/6 Trần Văn Mười, Hóc Môn, TP. Hồ Chí Minh</p>
+                            </li>
+                            <li>
+                                <span><i class="fas fa-phone"></i></span>
+                                <p>0903 576 159</p>
+                            </li>
+                            <li>
+                                <span><i class="fas fa-envelope-open-text"></i></span>
+                                <p>sale@hongnghi.ai</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--====== SIDE INFO FOR MOBILE END ======-->
+
+
+    <!--====== SIDE INFO FOR DESKTOP START ======-->
+    <aside class="side-info-wrapper show-all">
+        <div class="side-info__wrapper d-flex align-items-center justify-content-between">
+            <div class="side-info__logo">
+                <a href="trang-chu.html">
+                    <img src="assets/img/logo/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="side-info__close">
+                <a href="javascript:void(0);"><i class="far fa-times"></i></a>
+            </div>
+        </div>
+        <div class="side-info">
+            <div class="side-info__content mb-35">
+                <h4 class="title mb-10">Về Chúng tôi</h4>
+                <p>Là thành viên của Công ty TNHH DV TM XNK Hồng Nghi, chúng tôi được thành lập sau hành trình số hóa
+                    thành công nội bộ. Với kinh nghiệm thực tế, chúng tôi mong muốn chia sẻ giải pháp và cách làm hiệu
+                    quả, giúp doanh nghiệp chuyển đổi số một cách bền vững và thực tiễn.</p>
+                <a class="sotcox-btn sotcox-btn__small mt-20" href="lien-he.html">Liên hệ Chúng tôi <span></span></a>
+            </div>
+            <div class="contact__info--wrapper mt-15">
+                <ul class="contact__info list-unstyled">
+                    <li>
+                        <span><i class="fas fa-map-marker-alt"></i></span>
+                        <p>7/6 Trần Văn Mười, Hóc Môn, TP. Hồ Chí Minh</p>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-phone"></i></span>
+                        <p>0903 576 159</p>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-envelope-open-text"></i></span>
+                        <p>sale@hongnghi.ai</p>
+                    </li>
+                </ul>
+                <!-- </div>
+            <div class="sotcox-social-links mt-30">
+                <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                <a href="#0"><i class="fab fa-twitter"></i></a>
+                <a href="#0"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#0"><i class="fab fa-instagram"></i></a>
+            </div> -->
+            </div>
+    </aside>
+    <!--====== SIDE INFO FOR DESKTOP END ======-->
+
+    <!--====== HERO SECTION START ======-->
+    <section class="sotcox-hero-section pb-90 pt-80">
+        <div class="shape shape__1 position-absolute wow fadeInUp" data-wow-delay="300ms" data-wow-duration="800ms"><img
+                src="assets/img/shapes/hero-shape-1.png" alt=""></div>
+        <div class="shape shape__2 position-absolute wow fadeInUp" data-wow-delay="600ms" data-wow-duration="800ms"><img
+                src="assets/img/shapes/hero-shape-2.png" alt=""></div>
+        <div class="container">
+            <div class="row flex-lg-row flex-md-column-reverse">
+                <div class="col-xl-5 col-lg-5">
+                    <div class="inner-content">
+                        <h3 class="title wow fadeInUp">NỀN TẢNG CHO DOANH NGHIỆP<br> VỮNG MẠNH</h3>
+                        <div class="inner-btns mt-50">
+                            <a href="san-pham.html" class="sotcox-btn wow fadeInUp" data-wow-delay="500ms"
+                                data-wow-duration="800ms">Sản phẩm - Dịch vụ <span></span></a>
+                        </div>
+                        <div class="sotcox-social-links mt-140">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7">
+                    <div class="inner-right">
+                        <div class="review-wrapper">
+                        </div>
+                        <div class="img-wrapper wow zoomIn" data-wow-delay="700ms" data-wow-duration="800ms">
+                           <img src="assets/img/home/home-page-2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== HERO SECTION END ======-->
+
+    <!-- Bọc toàn bộ nội dung trong lớp .custom-section -->
+    <div class="custom-section pb-55 pt-30">
+        <div class="container">
+            <h1 class="text-center mb-4">Cung Cấp Phần Cứng – Hổ Trợ Theo Nhu Cầu Khách Hàng</h1>
+            <div class="row">
+                <!-- Phần bên trái: Dropdown -->
+                <div class="col-md-6">
+                    <div class="dropdown-section">
+                        <div class="accordion" id="accordionExample">
+                            <!-- MODULE BÁN HÀNG -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="fas fa-link me-2"></i> Các dịch vụ phần cứng bao gồm:
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample"
+                                    data-image="imageOne">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Cung cấp thiết bị bổ trợ theo nghiệp vụ:
+                                                <ul>
+                                                    <li>
+                                                        Nâng cấp máy tính hiện có
+                                                        <ul>
+                                                            <li>Tăng RAM, nâng cấp SSD để đảm bảo phần mềm hoạt động
+                                                                mượt mà.</li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li>Phù hợp với các doanh nghiệp có máy tính cũ, chạy chậm.
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                                <ul>
+                                                    <li>
+                                                        Cung cấp thiết bị bổ trợ theo nghiệp vụ
+                                                        <ul>
+                                                            <li>Máy in hóa đơn, đầu đọc mã vạch, máy POS cho phần mềm
+                                                                bán hàng.</li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li>Máy chấm công, camera cho phần mềm nhân sự, giám sát.
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li>Máy chủ, thiết bị NAS cho nhu cầu lưu trữ nội bộ.</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                                <ul>
+                                                    <li>
+                                                        Tư vấn cấu hình thiết bị – khách hàng tự mua
+                                                        <ul>
+                                                            <li>Đề xuất cấu hình phù hợp theo quy mô sử dụng phần mềm.
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li>Tránh mua nhầm thiết bị không tương thích hoặc quá dư
+                                                                thừa.</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                                <ul>
+                                                    <li>
+                                                        Cung cấp thiết bị mạng và kết nối
+                                                        <ul>
+                                                            <li>Router, Switch, Wi-Fi Access Point...</li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li>Đảm bảo mạng ổn định trong môi trường sử dụng phần mềm
+                                                                online.</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                                <h3>Lợi ích dành cho khách hàng:</h3>
+                                                <ul>
+                                                    <li>Không bắt buộc – chỉ triển khai khi có nhu cầu thực tế.</li>
+                                                    <li>Được tư vấn kỹ thuật phù hợp với phần mềm đang dùng.</li>
+                                                    <li>Giảm chi phí nhờ lựa chọn đúng thiết bị cần thiết.</li>
+                                                    <li>Hỗ trợ lắp đặt tận nơi – bảo hành chính hãng.</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Phần bên phải: Hình ảnh -->
+                <div class="col-md-6">
+                    <div class="image-section" id="imageSection">
+                        <img id="imageOne" src="assets/img/phancung.gif" alt="Hình MODULE BÁN HÀNG">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--   Why not used ready software -->
+        <div class="custom-feature-section container my-5">
+            <!-- Tiêu đề chính -->
+            <h2 class="custom-section-title text-center mb-5">
+                TẠI SAO NÊN CHỌN VIỆT PHẦN MỀM THEO YÊU CẦU<br>
+                KHÔNG SỬ DỤNG PHẦN MỀM CÓ SẴN?
+            </h2>
+
+            <!-- Grid chứa các mục -->
+            <div class="row text-center">
+                <!-- Mục 1 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="border p-4 rounded-4 h-100 custom-feature-item p-4">
+                        <div class="custom-icon-circle mb-3">
+                            <i class="fas fa-money-bill-wave fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="custom-feature-title">TIẾT KIỆM CHI PHÍ DÀI HẠN</h5>
+                        <p class="custom-feature-text">
+                            Mức độ chi phí bạn đầu cao để phát triển phần mềm theo yêu cầu, nhưng về độ bền năm học bạn
+                            sẽ cảm nhận được sự khác biệt so với dùng phần mềm có sẵn hàng năm, trong khi việc viết phần
+                            mềm theo yêu cầu có thể dùng lâu dài.
+                        </p>
+                    </div>
+                </div>
+                <!-- Mục 2 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="border p-4 rounded-4 h-100 custom-feature-item p-4">
+                        <div class="custom-icon-circle mb-3">
+                            <i class="fas fa-check-circle fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="custom-feature-title">TÍNH TIỆN LỢI</h5>
+                        <p class="custom-feature-text">
+                            Phần mềm viết theo yêu cầu được thiết kế và phát triển dựa trên nhu cầu cụ thể của doanh
+                            nghiệp, đảm bảo tiện ích cao và tối ưu hóa các tính năng không cần thiết học, giao diện đơn
+                            giản, dễ sử dụng.
+                        </p>
+                    </div>
+                </div>
+                <!-- Mục 3 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="border p-4 rounded-4 h-100 custom-feature-item p-4">
+                        <div class="custom-icon-circle mb-3">
+                            <i class="fas fa-hand-pointer fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="custom-feature-title">ĐỂ ỨNG DỤNG TRONG DOANH NGHIỆP</h5>
+                        <p class="custom-feature-text">
+                            Phần mềm phát triển theo yêu cầu sẽ được tùy chỉnh để phù hợp với quy trình làm việc và nhu
+                            cầu cụ thể của doanh nghiệp, nâng cao hiệu quả, tính cạnh tranh và khả năng mở rộng lâu dài.
+                            Không giới hạn số lượng người dùng.
+                        </p>
+                    </div>
+                </div>
+                <!-- Mục 4 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="border p-4 rounded-4 h-100 custom-feature-item p-4">
+                        <div class="custom-icon-circle mb-3">
+                            <i class="fas fa-exclamation-triangle fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="custom-feature-title">HẠN CHẾ TÌNH NĂNG</h5>
+                        <p class="custom-feature-text">
+                            Phần mềm có sẵn thường có các tính năng không phù hợp với nhu cầu cụ thể của doanh nghiệp,
+                            gây khó khăn trong việc sử dụng. Một số phần mềm không thể tích hợp vào hệ thống hiện tại và
+                            tập trung vào những tính năng không cần thiết.
+                        </p>
+                    </div>
+                </div>
+                <!-- Mục 5 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="border p-4 rounded-4 h-100 custom-feature-item p-4">
+                        <div class="custom-icon-circle mb-3">
+                            <i class="fas fa-cogs fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="custom-feature-title">KHÔNG TRONG VIỆC NÂNG CẤP VÀ HỖ TRỢ</h5>
+                        <p class="custom-feature-text">
+                            Việc nâng cấp phần mềm có sẵn thường gặp phải những rủi ro không tương thích với các phiên
+                            bản cũ hoặc không đáp ứng được yêu cầu mới. Trong khi đó, viết phần mềm riêng có thể được
+                            thực hiện một cách dễ dàng và linh hoạt hơn.
+                        </p>
+                    </div>
+                </div>
+                <!-- Mục 6 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="border p-4 rounded-4 h-100 custom-feature-item p-4">
+                        <div class="custom-icon-circle mb-3">
+                            <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="custom-feature-title">TÍNH BẢO MẬT THẤP</h5>
+                        <p class="custom-feature-text">
+                            Phần mềm có sẵn thường là mục tiêu của các cuộc tấn công mạng do tính phổ biến. Những phần
+                            mềm này thường không được bảo mật tối ưu hóa để bảo vệ dữ liệu quan trọng của doanh nghiệp.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--   Why not used ready software -->
+
+        <!--====== CONTACT INFO SECTION START ======-->
+        <div class="container my-5">
+            <div class="row justify-content-center">
+
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 p-4 text-center border">
+                        <!-- Header with icon and small title -->
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <img src="assets/img/icons/phone.png" alt="Icon" width="24" height="24" class="me-2">
+                            <span class="text-primary fw-semibold small">TƯ VẤN MIỄN PHÍ</span>
+                        </div>
+                        <h6 class="fw-bold">Đặt Lịch Tư Vấn Miễn Phí</h6>
+                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal">ĐẶT
+                            LỊCH</button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 p-4 text-center border">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <img src="assets/img/icons/envelope.png" alt="Icon" width="24" height="24" class="me-2">
+                            <span class="text-warning fw-semibold small">HỖ TRỢ</span>
+                        </div>
+                        <h6 class="fw-bold">Hỗ Trợ Nghiệp Vụ - Xử Lý Yêu Cầu Phát Sinh</h6>
+                        <a href="https://zalo.me/0903576159" class="btn btn-primary mt-3">Gửi yêu cầu <span></span></a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 p-4 text-center border">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <img src="assets/img/icons/desk.png" alt="Icon" width="24" height="24" class="me-2">
+                            <span class="text-info fw-semibold small">DỊCH VỤ CHĂM SÓC</span>
+                        </div>
+                        <h6 class="fw-bold">Hỗ trợ khẩn cấp cấp?</h6>
+                        <div class="mt-3 fs-5 fw-bold text-dark">0903 576 159</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Modal Đặt lịch tư vấn -->
+        <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg"> <!-- Thêm modal-lg để tăng kích thước -->
+                <div class="modal-content">
+                    <form id="bookingForm">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="bookingModalLabel">Đặt lịch tư vấn</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <!-- Cột trái -->
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="company" class="form-label">Tên công ty</label>
+                                        <input type="text" class="form-control" name="company" required>
+                                        <div class="invalid-feedback">Vui lòng nhập tên công ty.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="contact" class="form-label">Người đại diện</label>
+                                        <input type="text" class="form-control" name="contact" required>
+                                        <div class="invalid-feedback">Vui lòng nhập tên người đại diện.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="industry" class="form-label">Ngành nghề</label>
+                                        <input type="text" class="form-control" name="industry" required>
+                                        <div class="invalid-feedback">Vui lòng nhập ngành nghề.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="product" class="form-label">Sản phẩm/Dịch vụ</label>
+                                        <select class="form-select" name="product" required>
+                                            <option value="">-- Chọn --</option>
+                                            <option value="Phần mềm kế toán">Phần mềm kế toán</option>
+                                            <option value="Phần mềm ERP">Phần mềm ERP</option>
+                                            <option value="Dịch vụ tư vấn CNTT">Dịch vụ tư vấn CNTT</option>
+                                        </select>
+                                        <div class="invalid-feedback">Vui lòng chọn sản phẩm hoặc dịch vụ.</div>
+                                    </div>
+                                </div>
+
+                                <!-- Cột phải -->
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="datetime" class="form-label">Thời gian hẹn gặp</label>
+                                        <input type="datetime-local" class="form-control" name="datetime" required>
+                                        <div class="invalid-feedback">Vui lòng chọn thời gian hẹn gặp.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="location" class="form-label">Địa điểm</label>
+                                        <input type="text" class="form-control" name="location" required>
+                                        <div class="invalid-feedback">Vui lòng nhập địa điểm.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Số điện thoại</label>
+                                        <input type="tel" class="form-control" name="phone" required>
+                                        <div class="invalid-feedback">Vui lòng nhập số điện thoại hợp lệ.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" name="email" required>
+                                        <div class="invalid-feedback">Vui lòng nhập email hợp lệ.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary w-50">Đặt lịch</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Cảm ơn -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="thankYouToast" class="toast align-items-center text-bg-success border-0" role="alert"
+                data-bs-autohide="true" data-bs-delay="3000">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        Cảm ơn bạn đã đặt lịch. Chúng tôi sẽ liên hệ sớm nhất!
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+        </div>
+        <!--====== CONTACT INFO SECTION END ======-->
+
+        <!--====== FOOTER START ======-->
+        <footer class="sotcox-footer theme-light-bg pt-95">
+            <div class="sotcox-copyright">
+                <div class="container ext-align-center">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-sm-8 text-center">
+                            <p>Copyright &copy; <span id="copyright-date"></span> Hong Nghi AI, All Rights Reserved.</p>
+                            <p>Designed by HongNghi.ai</p>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+        <!--====== FOOTER END ======-->
+
+
+        <!--========= JS Here =========-->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('scrollTop').addEventListener('click', function () {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+        </script>
+
+        <!-- Floating Buttons -->
+        <div class="floating-icons">
+            <a href="tel:0903576159" class="icon" title="Gọi ngay">
+                <img src="assets/img/icons/phone-3.png">
+            </a>
+            <a href="https://zalo.me/0903576159" class="icon" title="Chat Zalo">
+                <img src="assets/img/icons/zalo-icon.jpg">
+            </a>
+            <div class="icon" id="scrollTop" title="Lên đầu trang" role="button" style="cursor:pointer">
+                <img src="assets/img/icons/top-up-icon.png">
+            </div>
+        </div>
+
+        <!--========= JS Here =========-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+
+        <script> //form đăng ký dùng thử
+            // EmailJS init
+            window.onload = function () {
+                emailjs.init("CVueMIMOm0nRfopu9"); // 🔁 Thay bằng Public Key của bạn
+            };
+
+            // Mở/đóng popup
+            function openPopup() {
+                document.getElementById("trialForm").style.display = "flex";
+                document.body.classList.add("overflow-hidden");
+            }
+
+            function closePopup() {
+                document.getElementById("trialForm").style.display = "none";
+                document.body.classList.remove("overflow-hidden");
+            }
+
+            // Bắt sự kiện submit
+            document.getElementById("trialFormElement").addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                let form = e.target;
+                let inputs = form.querySelectorAll("input, select, textarea");
+                let isValid = true;
+
+                inputs.forEach(input => {
+                    let feedback = input.nextElementSibling;
+                    if (!input.checkValidity()) {
+                        input.classList.add("is-invalid");
+                        if (feedback) feedback.style.display = "block";
+                        isValid = false;
+                    } else {
+                        input.classList.remove("is-invalid");
+                        if (feedback) feedback.style.display = "none";
+
+                        // Kiểm tra email hợp lệ
+                        if (input.type === "email") {
+                            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            if (!emailRegex.test(input.value)) {
+                                input.classList.add("is-invalid");
+                                feedback.textContent = "Vui lòng nhập email hợp lệ.";
+                                feedback.style.display = "block";
+                                isValid = false;
+                            }
+                        }
+
+                        // Kiểm tra số điện thoại
+                        if (input.type === "tel") {
+                            const phoneRegex = /^[0-9]{9,}$/;
+                            if (!phoneRegex.test(input.value)) {
+                                input.classList.add("is-invalid");
+                                feedback.textContent = "Số điện thoại không hợp lệ.";
+                                feedback.style.display = "block";
+                                isValid = false;
+                            }
+                        }
+                    }
+                });
+
+                if (isValid) {
+                    const formData = {
+                        contact: form.contact.value,
+                        phone: form.phone.value,
+                        email: form.email.value,
+                        location: form.location.value,
+                        adress: form.adress.value,
+                        product: form.product.value,
+                        note: form.note.value || "",
+                        to_email: "dung.bui@mdfhongnghi.vn", // 📨 Người nhận
+                        user_email: form.email.value // 🧾 Người đăng ký
+                    };
+
+                    emailjs.send("service_jmsajrv", "template_kmqda3d", formData)
+                        .then(() => {
+                            let toastEl = document.getElementById("trialToast");
+                            let toast = new bootstrap.Toast(toastEl);
+                            toast.show();
+
+                            closePopup();
+                            form.reset();
+                        })
+                        .catch(error => {
+                            console.error("Lỗi gửi email:", error);
+                            alert("Có lỗi xảy ra khi gửi thông tin. Vui lòng thử lại.");
+                        });
+                }
+            });
+        </script>
+
+
+
+        <script>   //form booking
+            window.onload = function () {
+                emailjs.init("CVueMIMOm0nRfopu9"); // Thay bằng Public Key của bạn
+            };
+
+            document.getElementById('bookingForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                let form = event.target;
+                let inputs = form.querySelectorAll('input, select');
+                let isValid = true;
+
+                inputs.forEach(input => {
+                    let feedback = input.nextElementSibling;
+                    if (!input.value.trim()) {
+                        input.classList.add('is-invalid');
+                        if (feedback) feedback.style.display = 'block';
+                        isValid = false;
+                    } else {
+                        input.classList.remove('is-invalid');
+                        if (feedback) feedback.style.display = 'none';
+
+                        // Kiểm tra email hợp lệ
+                        if (input.type === 'email') {
+                            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            if (!emailRegex.test(input.value)) {
+                                input.classList.add('is-invalid');
+                                if (feedback) {
+                                    feedback.textContent = 'Vui lòng nhập email hợp lệ.';
+                                    feedback.style.display = 'block';
+                                }
+                                isValid = false;
+                            }
+                        }
+
+                        // Kiểm tra số điện thoại hợp lệ (ít nhất 9 số)
+                        if (input.type === 'tel') {
+                            const phoneRegex = /^[0-9]{9,}$/;
+                            if (!phoneRegex.test(input.value)) {
+                                input.classList.add('is-invalid');
+                                if (feedback) {
+                                    feedback.textContent = 'Số điện thoại không hợp lệ.';
+                                    feedback.style.display = 'block';
+                                }
+                                isValid = false;
+                            }
+                        }
+                    }
+                });
+
+                if (isValid) {
+                    const formData = {
+                        company: form.company.value,
+                        contact: form.contact.value,
+                        industry: form.industry.value,
+                        product: form.product.value,
+                        email: form.email.value,
+                        datetime: form.datetime.value,
+                        location: form.location.value,
+                        phone: form.phone.value,
+                        to_email: 'dung.bui@mdfhongnghi.vn', // Email người nhận
+                        user_email: form.email.value // Email người đặt lịch
+                    };
+
+                    emailjs.send("service_jmsajrv", "template_r3gwrdi", formData)
+                        .then(() => {
+                            let toastEl = document.getElementById('thankYouToast');
+                            let toast = new bootstrap.Toast(toastEl);
+                            toast.show();
+
+                            const modalEl = document.getElementById('bookingModal');
+                            const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+
+                            // Đợi modal đóng xong rồi mới xử lý cleanup
+                            modalEl.addEventListener('hidden.bs.modal', function onModalHidden() {
+                                // Gỡ class modal-open (nếu còn)
+                                document.body.classList.remove('modal-open');
+                                document.body.style.removeProperty('padding-right');
+                                document.body.style.removeProperty('overflow');
+
+                                // Gỡ backdrop nếu bị sót
+                                document.querySelectorAll('.modal-backdrop').forEach(b => b.remove());
+
+                                // Reset form
+                                document.getElementById('bookingForm').reset();
+
+                                // Gỡ sự kiện để tránh gọi nhiều lần
+                                modalEl.removeEventListener('hidden.bs.modal', onModalHidden);
+                            });
+
+                            modal.hide();
+                        })
+                        .catch(error => {
+                            console.error('Lỗi gửi email:', error);
+                            alert('Có lỗi xảy ra khi gửi email. Vui lòng thử lại.');
+                        });
+
+
+                }
+            });
+
+
+        </script>
+
+
+        <script>
+            // Lấy tất cả các phần tử accordion-collapse
+            const collapses = document.querySelectorAll('.accordion-collapse');
+
+            // Hàm ẩn tất cả hình ảnh
+            function hideAllImages() {
+                document.querySelectorAll('.image-section img').forEach(img => {
+                    img.style.display = 'none';
+                });
+            }
+
+            // Hàm đồng bộ kích thước của image-section với dropdown-section
+            function syncImageSectionSize() {
+                const dropdownSection = document.querySelector('.dropdown-section');
+                const imageSection = document.querySelector('.image-section');
+                if (dropdownSection && imageSection) {
+                    // Chỉ đồng bộ trên màn hình lớn (khi không phải chế độ di động)
+                    if (window.innerWidth >= 768) {
+                        const dropdownWidth = dropdownSection.offsetWidth;
+                        const dropdownHeight = dropdownSection.offsetHeight;
+                        imageSection.style.width = `${dropdownWidth}px`;
+                        imageSection.style.height = `${dropdownHeight}px`;
+                    } else {
+                        imageSection.style.width = '100%'; // Trên di động, chiếm toàn bộ chiều rộng
+                        imageSection.style.height = 'auto'; // Chiều cao tự động trên di động
+                    }
+                }
+            }
+
+            // Thêm sự kiện cho từng collapse
+            collapses.forEach(collapse => {
+                collapse.addEventListener('show.bs.collapse', function () {
+                    // Ẩn tất cả hình ảnh trước
+                    hideAllImages();
+
+                    // Lấy ID của hình ảnh từ data-image
+                    const imageId = this.getAttribute('data-image');
+                    const imageToShow = document.getElementById(imageId);
+
+                    // Hiển thị hình ảnh tương ứng
+                    if (imageToShow) {
+                        imageToShow.style.display = 'block';
+                    }
+
+                    // Đồng bộ kích thước khi mở mục mới
+                    syncImageSectionSize();
+                });
+
+                // Đồng bộ lại kích thước khi nội dung accordion thay đổi
+                collapse.addEventListener('shown.bs.collapse', syncImageSectionSize);
+                collapse.addEventListener('hidden.bs.collapse', syncImageSectionSize);
+            });
+
+            // Hiển thị hình ảnh đầu tiên và đồng bộ kích thước khi trang tải
+            document.addEventListener('DOMContentLoaded', function () {
+                const firstCollapse = document.querySelector('.accordion-collapse.show');
+                if (firstCollapse) {
+                    const imageId = firstCollapse.getAttribute('data-image');
+                    const imageToShow = document.getElementById(imageId);
+                    if (imageToShow) {
+                        imageToShow.style.display = 'block';
+                    }
+                }
+                syncImageSectionSize(); // Đồng bộ kích thước khi tải trang
+            });
+
+            // Đồng bộ kích thước khi thay đổi kích thước cửa sổ
+            window.addEventListener('resize', syncImageSectionSize);
+        </script>
+
+        <script src="assets/js/jquery-3.7.0.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <script src="assets/js/uikit.js"></script>
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/lightcase.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.easing.min.js"></script>
+        <script src="assets/js/waypoint.js"></script>
+        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/js-jquery.knob.js"></script>
+        <script src="assets/js/js-jquery.appear.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>

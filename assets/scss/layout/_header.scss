@@ -1,0 +1,117 @@
+/* HEADER CSS START*/
+.sotcox-logo-menu-wrapper {
+	@include d-flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	.sotcox-logo {
+		margin-right: 50px;
+		max-width: 185px;
+		&__sticky {
+			display: none;
+		}
+		@include respond(md) {
+			margin-right: 0px;
+		}
+	}
+}
+
+.sotcox-header {
+	@include respond(lg) {
+		padding: 20px 0px;
+	}
+	.right-element {
+		@include d-flex;
+		align-items: center;
+		justify-content: flex-end;
+		li {
+			cursor: pointer;
+			position: relative;
+			&:not(:last-child) {
+				margin-right: 35px;
+			}
+		}
+	}
+	.sotcox-btn {
+		padding: 10px 42px;
+		&.has-span {
+			margin-bottom: 0px;
+		}
+	}
+	&.uk-active {
+		box-shadow: 0 0 60px 0 rgb(0 0 0 / 7%);
+		background: $white;
+		padding: 12px 0px;
+		z-index: 3;
+		@include respond(lg) {
+			padding: 20px 0px;
+		}
+		.sotcox-menu-wrapper {
+			background: transparent;
+		}
+		ul {
+			li {
+				a {
+					color: $dark;
+					&:focus {
+						color: $theme-color-2;
+					}
+				}
+			}
+		}
+        .sotcox-logo {
+            &__default {
+                display: none;
+            }
+            &__sticky {
+                display: inline-block;
+            }
+        }
+		.right-element {
+			li {
+				svg path {
+					fill: $dark;
+				}
+			}
+		}
+	}
+	&__style-2 {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		z-index: 2;
+		.right-element {
+			li {
+				svg path {
+					fill: $white;
+				}
+			}
+		}
+	}
+}
+
+.sideinfo-trigger {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: $theme-color-2;
+	@include d-flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	span {
+		translate: 12px 0px;
+		width: 25px;
+		height: 2px;
+		border-radius: 20px;
+		margin: 2.5px 0px;
+		background: $white;
+
+		&:nth-child(2) {
+			width: 20px;
+		}
+		&:nth-child(3) {
+			width: 15px;
+		}
+	}
+}
+/* HEADER CSS END*/

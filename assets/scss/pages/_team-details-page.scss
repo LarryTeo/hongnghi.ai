@@ -1,0 +1,82 @@
+/* TEAM DETAILS PAGE CSS START */
+.sotcox-team-details-page {
+    .details-thumb {
+        img {
+            width: 100%;
+        }
+    }
+    .team-info {
+        @include respond(lg) {
+            padding-left: 30px;
+        }
+        @include respond(md) {
+            padding-left: 0px;
+            margin-top: 50px;
+        }
+        .name {
+            margin-bottom: 5px;
+            font-size: 35px;
+        }
+        .designation {
+            display: block;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        ul {
+            margin-top: 35px !important;
+            li {
+                font-size: 18px;
+                @include respond(xxs) {
+                    font-size: 16px;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+                span {
+                    margin-right: 15px;
+                    display: inline-block;
+                    color: $dark;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .details-content {
+        p {
+            font-size: 16px;
+        }
+    }
+    .sotcox-social-links {
+		a {
+			width: 40px;
+			height: 40px;
+			border: 1px solid $theme-color-light;
+			border-radius: 50px;
+			font-size: 14px;
+			@include d-flex(center, center);
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+			&:hover,
+			&.active {
+				background: $theme-color;
+				color: $white;
+				border-color: $theme-color;
+			}
+		}
+	}
+}
+.sotcox-skill-item {
+    .knob {
+        font-size: 42px !important;
+        font-family: $heading-font !important;
+        color: $dark !important;
+        margin-top: 65px !important;
+    }
+    .skill-title {
+        font-size: 20px;
+        margin-top: 25px;
+        color: $pera-color;
+    }
+}
+/* TEAM DETAILS PAGE CSS END */

@@ -1,0 +1,142 @@
+/* TESTIMONIAL CSS START */
+.sotcox-testimonial-section {
+    position: relative;
+    .small-shape {
+		position: absolute;
+		&__1 {
+			left: 5%;
+			top: 12%;
+            animation: shapeDownLeft 2s linear infinite alternate;
+		}
+		&__2 {
+			left: auto;
+			right: 20%;
+			top: 10%;
+            animation: shapeTopLeft 2s linear infinite alternate;
+		}
+		&__3 {
+			left: 0%;
+			top: auto;
+			bottom: 5%;
+            animation: shapeDownLeft 2s linear infinite alternate;
+		}
+	}
+}
+.sotcox-testimonial-wrapper {
+    &__style-2 {
+        .owl-stage-outer {
+            overflow: visible;
+        }
+    }
+}
+.sotcox-testimonial-item {
+    background: $white;
+    padding: 40px;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    @include respond(xxs) {
+        padding: 30px;
+        padding-bottom: 20px;
+    }
+    .thumb {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-bottom: 25px;
+        position: relative;
+        img {
+            border-radius: 50%;
+        }
+    }
+    .quote {
+        font-size: 14px;
+        color: $theme-color;
+        border: 1px solid $theme-color-light;
+        border-radius: 50%;
+        @include d-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: -15px;
+        top: 0;
+        width: 28px;
+        height: 28px;
+        line-height: 100%;
+        z-index: 2;
+        background: $white;
+    }
+    p {
+        position: relative;
+        padding-left: 20px;
+        &::after {
+            @include after;
+            background: $theme-color-2;
+            width: 1px;
+            top: 50%;
+            translate: 0 -50%;
+            height: calc(100% - 15px);
+        }
+    }
+    .title {
+        font-size: 18px;
+        text-transform: capitalize;
+    }
+    .sub-title {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+    }
+    &__style-2 {
+        background: $bg-dark;
+        border: 1px solid #252529;
+        padding: 25px 30px;
+        .top {
+            position: relative;
+            @include d-flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            i {
+                position: absolute;
+                right: 0px;
+                top: 5px;
+                &.fa-twitter {
+                    color: #03a9f4;
+                }
+                &.fa-instagram {
+                    color: $white;
+                    border-radius: 2px;
+                    background-image: linear-gradient(49.12deg, #FFDD55 6.62%, #FF543E 50.06%, #C837AB 93.5%);
+                }
+            }
+        }
+        .thumb {
+            width: 45px;
+            margin-right: 20px;
+            height: 45px;
+            margin-bottom: 0px;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+        .title {
+            color: $white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sub-title {
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+        p {
+            padding-left: 0px;
+            color: $pera-color-2;
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+/* TESTIMONIAL CSS END */

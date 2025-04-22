@@ -1,0 +1,152 @@
+/* PRICING CSS START */
+.sotcox-pricing-tab {
+    text-align: center;
+    nav {
+        display: inline-block;
+        background: #d3e1fa;
+        padding: 7px;
+        border-radius: 40px;
+        a {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 7px 40px;
+            letter-spacing: 0.075em;
+            border-radius: 40px;
+            color: $dark;
+            &:not(:last-child) {
+                margin-right: 10px;
+                @include respond(xxs) {
+                    margin-right: 0px;
+                }
+            }
+            &:hover,
+            &.active {
+                background: $theme-color;
+                color: $white;
+            }
+        }
+    }
+}
+
+.sotcox-pricing-box {
+    background: $white;
+    border-radius: 10px;
+    padding: 30px 50px;
+    @include respond(lg) {
+        padding: 30px 35px;
+    }
+    .title {
+        font-size: 35px;
+        text-transform: capitalize;
+        @include respond(md) {
+            margin-bottom: 20px;
+        }
+    }
+    .shape {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        translate: 0 -50%;
+        @include respond(lg) {
+            right: 20px;
+        }
+        @include respond(md) {
+            display: none;
+        }
+        &::before {
+            @include after;
+            background: #D9E0EB;
+            width: 1px;
+            border-radius: 40px;
+            left: auto;
+            right: 0;
+            min-height: 180px;
+            top: 50%;
+            translate: 0 -50%;
+        }
+        &::after {
+            @include after;
+            background: $theme-color-2;
+            height: 40px;
+            border-radius: 40px;
+            width: 3px;
+            right: -1.5px;
+            top: 50%;
+            translate: 0 -50%;
+            left: auto
+        }
+    }
+    ul {
+        @include d-flex;
+        align-items: center;
+        li {
+            width: 50%;
+            color: $dark;
+            text-transform: capitalize;
+            @include d-flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            @include respond(xxs) {
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            i {
+                margin-right: 10px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+            &.hide {
+                color: #6c757d;
+            }
+        }
+    }
+    &.active {
+        background: $theme-color;
+        .title {
+            color: $white;
+        }
+        .shape {
+            &::before {
+                background: #d9e0eb;
+            }
+        }
+        ul {
+            li {
+                color: $white;
+                i {
+                    color: $white;
+                }
+            }
+        }
+        .sotcox-btn {
+            border: 1px solid $white;
+        }
+    }
+    .pl-100 {
+        @include respond(lg) {
+            padding-left: 10px;
+        }
+        @include respond(md) {
+            padding-left: 0px;
+        }
+    }
+    .text-end {
+        @include respond(md) {
+            text-align: left !important;
+            margin-top: 20px;
+        }
+        @include respond(xxs) {
+            margin-top: 30px;
+        }
+    }
+}
+.sotcox-pricing-wrapper {
+    .sotcox-pricing-box {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}
+/* PRICING CSS END */

@@ -1,0 +1,45 @@
+/* preloader css start */
+#sotcox-loadding {
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	z-index: 999999;
+	top: 0;
+	left: 0;
+	background-color: $white;
+    @include transition(all 300ms linear 0ms);
+	@include transform(scale(1));
+}
+.sotcox-spinner {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 50%;
+	@include transform(translate(0, -50%));
+	width: 70px;
+	text-align: center;
+    > div {
+        width: 18px;
+        height: 18px;
+        background: $theme-color;
+        -webkit-border-radius: 100%;
+        -khtml-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: sotcox-bouncedelay 1.4s infinite ease-in-out both;
+        animation: sotcox-bouncedelay 1.4s infinite ease-in-out both;
+    }
+    .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+    .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+    }
+}
+/* preloader css end */

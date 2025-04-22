@@ -1,0 +1,165 @@
+/* FAQ CSS START */
+.sotcox-faq-section {
+	.left-wrapper {
+		padding-right: 50px;
+		@include respond(lg) {
+			padding-right: 0px;
+			margin-bottom: 50px;
+		}
+	}
+}
+.faq {
+	&__wrapper {
+		@include respond(md) {
+			margin-bottom: 50px;
+		}
+	}
+	&__item {
+		border-radius: 0px !important;
+		border: none;
+		background: transparent;
+		.title {
+			border: none;
+			border-bottom: 0px;
+		}
+		.accordion-button {
+			font-size: 18px;
+			font-family: $heading-font;
+			font-weight: 700;
+			padding: 12px 0px;
+			border-radius: 0px !important;
+			color: $dark;
+			background: transparent;
+			box-shadow: none !important;
+			&:focus {
+				outline: none !important;
+				border: none;
+				box-shadow: none;
+			}
+			&::after {
+				right: 0px;
+				content: "\f107";
+				font-family: "Font Awesome 5 Pro";
+				text-align: center;
+				top: 50%;
+				@include transform(translateY(-50%));
+				border-radius: 50%;
+				position: absolute;
+				font-size: 16px;
+				width: 25px;
+				height: 25px;
+				background: none;
+				color: $dark;
+				font-weight: 400;
+				line-height: 24px;
+			}
+			&:not(.collapsed) {
+				background: transparent;
+				box-shadow: none !important;
+				&::after {
+					content: "\f106";
+				}
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		.accordion-body {
+			border-top: 0px;
+			padding: 0px;
+			border-bottom: 0px;
+			border: none;
+			padding-bottom: 15px;
+		}
+		&:first-of-type {
+			border-bottom: 1px solid #d2dceb;
+		}
+		&:last-of-type {
+			border-bottom: 1px solid #d2dceb;
+		}
+		&:not(:first-of-type):not(:last-of-type) {
+			border-bottom: 1px solid #d2dceb;
+		}
+		&--style-2 {
+			.accordion-button {
+				font-size: 22px;
+				padding: 35px 30px;
+				padding-bottom: 30px;
+				@include respond(xxs) {
+					padding: 25px 20px;
+					padding-bottom: 20px;
+					padding-right: 40px;
+				}
+				&::after {
+					font-size: 22px;
+					color: $theme-color;
+					right: 30px;
+					@include respond(xxs) {
+						right: 20px;
+					}
+				}
+				&:not(.collapsed) {
+					background: $theme-color-light;
+				}
+			}
+			.accordion-body {
+				padding: 0px 30px;
+				padding-bottom: 35px;
+				background: $theme-color-light;
+				@include respond(xxs) {
+					padding: 0px 20px;
+					padding-bottom: 25px;
+				}
+			}
+		}
+	}
+}
+
+.sotcox-faq-tab {
+	a {
+		background: $theme-color-light;
+		font-size: 18px;
+		font-weight: 700;
+		font-family: $heading-font;
+		padding: 15px 30px;
+		border-radius: 5px;
+		display: block;
+		color: $dark;
+		position: relative;
+		&::after {
+			right: 30px;
+			content: "\f107";
+			font-family: "Font Awesome 5 Pro";
+			text-align: center;
+			top: 50%;
+			@include transform(translateY(-50%));
+			border-radius: 50%;
+			position: absolute;
+			font-size: 18px;
+			width: 25px;
+			height: 25px;
+			background: none;
+			color: $dark;
+			font-weight: 400;
+			line-height: 24px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		&:hover,
+		&.active {
+			background: $theme-color;
+			color: $white;
+			&::after {
+				color: $white;
+			}
+		}
+		&.active {
+			&::after {
+				content: "\f106";
+			}
+		}
+	}
+}
+
+/* FAQ CSS END */

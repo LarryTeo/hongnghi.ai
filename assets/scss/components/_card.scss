@@ -1,0 +1,84 @@
+/* CARD CSS START */
+.sotcox-card-wrapper {
+    background: $white;
+    border-radius: 10px;
+    padding: 40px 50px;
+    @include respond(md) {
+        flex-wrap: wrap;
+    }
+    @include respond(xs) {
+        padding: 30px 40px;
+    }
+    @include respond(xxs) {
+        padding: 30px 20px;
+    }
+    > div {
+        @include respond(md) {
+            width: 50%;
+        }
+        @include respond(xs) {
+            width: 100%;
+        }
+        &:nth-child(2) {
+            border-left: 1px solid $theme-color-light;
+            border-right: 1px solid $theme-color-light;
+            padding: 0px 60px;
+            @include respond(lg) {
+                border: none;
+                padding: 0px;
+            }
+            .sotcox-dots {
+                left: 60px;
+                @include respond(lg) {
+                    left: 0px
+                }
+            }
+        }
+        &:not(:last-child) {
+            @include respond(md) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+.sotcox-card-box {
+    @include d-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    .icon {
+        margin-right: 18px;
+        width: 70px;
+    }
+    .title {
+        font-weight: 600;
+    }
+    .sotcox-dots {
+        background: $theme-color-light;
+        border-radius: 40px;
+        position: absolute;
+        left: 0;
+        bottom: -50px;
+        @include respond(md) {
+            display: none;
+        }
+        span {
+            opacity: .30;
+        }
+    }
+    &__2 {
+        .sotcox-dots {
+            span {
+                background: $theme-color-2;
+            }
+        }
+    }
+    &__3 {
+        .sotcox-dots {
+            span {
+                background: #FEBB43;
+            }
+        }
+    }
+}
+/* CARD CSS END */

@@ -1,0 +1,108 @@
+/* NEWSLETTER CSS START */
+.sotcox-newsletter-section {
+	position: relative;
+	&::after {
+		@include after;
+		height: 50%;
+		top: auto;
+		bottom: 0;
+		background: $theme-color-light;
+		z-index: -1;
+	}
+	&.sotcox-service-page {
+		&::after {
+			height: 100%;
+		}
+	}
+}
+.sotcox-newsletter-wrapper {
+	position: relative;
+	background: $theme-color;
+	color: $white;
+	padding: 70px 100px;
+	border-radius: 10px;
+	@include respond(xs) {
+		padding: 60px 35px;
+	}
+	.sub-heading {
+		&::after {
+			display: none;
+		}
+	}
+	.heading {
+		font-size: 24px;
+		line-height: 32px;
+		position: relative;
+		z-index: 2;
+	}
+	.shape {
+		&__1 {
+			left: 0;
+			bottom: 0;
+		}
+		&__2 {
+			right: 0;
+			top: 0;
+		}
+	}
+}
+.sotcox-newsletter-form {
+	position: relative;
+	@include respond(lg) {
+		margin-top: 40px;
+	}
+	&.sotcox-input-field {
+		input {
+			padding: 20px 30px;
+		}
+	}
+
+	button {
+		padding: 10px 42px;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		position: absolute;
+		@include respond(xs) {
+			position: static;
+			top: 0;
+			right: 0;
+			margin-top: 20px;
+			background: $theme-color-2;
+			padding: 15px 42px;
+		}
+	}
+	&__style-2 {
+		&.sotcox-input-field {
+			input {
+				padding: 5px 0px;
+				padding-right: 30px;
+				padding-bottom: 20px;
+				background: transparent;
+				border-bottom: 1px solid #454547;
+				color: $white;
+				border-radius: 0px;
+				&::placeholder {
+					color: $white;
+				}
+			}
+		}
+		button {
+			padding: 0px;
+			font-size: 20px;
+			color: $white;
+			background: transparent;
+			top: 5px;
+			@include respond(xs) {
+				position: absolute;
+				padding: 0px;
+				font-size: 20px;
+				color: $white;
+				background: transparent;
+				top: 5px;
+				margin-top: 0px;
+			}
+		}
+	}
+}
+/* NEWSLETTER CSS END */

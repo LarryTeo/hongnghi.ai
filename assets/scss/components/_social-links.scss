@@ -1,0 +1,23 @@
+/* SOCIAL LINKS CSS START */
+.sotcox-social-links {
+    @include d-flex;
+    align-items: center;
+    a {
+        color: $dark;
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+        &:hover {
+            color: $theme-color-2;
+        }
+    }
+    span {
+        font-size: 14px;
+        color: $dark;
+        font-weight: 700;
+        margin-left: 10px;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+}
+/* SOCIAL LINKS CSS END */

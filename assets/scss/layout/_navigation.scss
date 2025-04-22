@@ -1,0 +1,173 @@
+/* MENU CSS START */
+.sotcox-menu-wrapper {
+    @include d-flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: $theme-color-light;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+	@include respond(lg) {
+		display: none;
+	}
+	&__style-2 {
+		background: transparent;
+	}
+}
+.sotcox-main-menu {
+	position: relative;
+    padding-right: 175px;
+	@include respond(laptop) {
+		padding-right: 35px
+	}
+    ul {
+		@include d-flex;
+		flex-wrap: wrap;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			position: relative;
+			&:not(:last-child) {
+				margin-right: 65px;
+				@include respond(laptop) {
+					margin-right: 60px;
+				}
+			}
+			a {
+				display: block;
+				text-decoration: none;
+				font-size: 14px;
+				color: $dark;
+				padding: 10px 0px;
+				font-weight: 700;
+				text-transform: uppercase;
+				position: relative;
+				&:focus {
+					color: $theme-color-2;
+				}
+				&::before {
+					@include after;
+					width: 9px;
+					height: 9px;
+					background: $theme-color-2;
+					bottom: 20px;
+					left: -15px;
+                    border-radius: 50%;
+                    translate: 0px -50%;
+                    top: 50%;
+					@include transition(0.3s linear);
+					opacity: .30;
+				}
+			}
+			&:hover > a {
+				color: $theme-color-2;
+				&::before {
+					opacity: 1;
+				}
+			}
+			&:hover {
+				& a {
+					color: $theme-color-2;
+				}
+			}
+			&:hover > .sub-menu {
+				visibility: visible;
+				opacity: 1;
+				@include transform(scaleY(100%));
+			}
+			.sub-menu {
+				left: 0%;
+				position: absolute;
+				min-width: 250px;
+				top: 100%;
+				visibility: hidden;
+				opacity: 0;
+				padding: 20px 30px;
+				@include transition(0.3s);
+				z-index: 3;
+				text-align: left;
+				transform-origin: 50% 0;
+				@include transform(scaleY(0));
+				justify-content: flex-start;
+				background: $white;
+				box-shadow: 0 5px 20px rgb(0 0 0 / 15%);
+				border-radius: 5px;
+				li {
+					&::after {
+						display: none;
+					}
+					width: 100%;
+					margin-right: 0px;
+					a {
+                        &::before,
+                        &::after {
+                            display: none;
+                        }
+						color: $dark;
+						padding: 3px 0px;
+					}
+					&:hover > a {
+						color: $theme-color-2;
+						padding-left: 5px;
+					}
+				}
+				.sub-menu {
+					left: 100%;
+					top: 0;
+				}
+			}
+		}
+        .menu-item-has-children {
+            >a {
+                &::after {
+                    font-size: 12px;
+                    content: "\f078";
+                    transform: translateY(1px);
+                    display: inline-block;
+                    padding-left: 7px;
+                    font-family: 'Font Awesome 5 Pro';
+                    transition: all .4s linear;
+                }
+            }
+        }
+		.sotcox-megamenu {
+			position: static;
+			.sub-menu {
+				padding: 50px;
+				width: 100%;
+				padding-bottom: 35px;
+			}
+		}
+	}
+	&__style-2 {
+		ul {
+			li {
+				a {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+.mean-container {
+	.mean-bar {
+		padding-left: 10px;
+		padding-top: 30px;
+		a {
+			font-weight: 700 !important;
+			font-size: 14px;
+			@include respond(xxs) {
+				padding-left: 5% !important;
+			}
+		}
+		a.mean-expand {
+			right: 40px !important;
+			@include respond(xxs) {
+				right: 20px !important;
+			}
+		}
+	}
+}
+/* MENU CSS END */

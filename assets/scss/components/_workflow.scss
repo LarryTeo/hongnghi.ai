@@ -1,0 +1,101 @@
+/* WORKFLOW CSS START */
+.sotcox-workflow-box {
+	position: relative;
+	border-radius: 10px;
+	@include transition(0.4s);
+	padding: 35px 30px;
+	@include respond(xs) {
+		padding: 35px 30px;
+	}
+	@include respond(sm) {
+		padding: 30px 20px;
+	}
+	.icon {
+		width: 80px;
+		height: 80px;
+		position: relative;
+		@include d-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		margin: 0 auto;
+		margin-bottom: 25px;
+		background: $white;
+        @include transition(0.4s);
+		.count {
+			position: absolute;
+			width: 32px;
+			height: 32px;
+			color: $dark;
+			border-radius: 50%;
+			font-size: 14px;
+			font-weight: 600;
+			font-family: $heading-font;
+			right: -15px;
+			top: 0;
+			background: $white;
+            @include transition(0.4s);
+		}
+	}
+	.title {
+		margin-bottom: 15px;
+	}
+	.sotcox-dots {
+		position: absolute;
+		right: -35px;
+		top: 40px;
+		z-index: 2;
+		@include respond(lg) {
+			right: -25px;
+		}
+		@include respond(xs) {
+			right: 0px;
+		}
+		@include respond(sm) {
+			right: -35px;
+		}
+		span {
+			&:first-child {
+				background: $theme-color-2;
+			}
+		}
+	}
+	&__1 {
+		&.active {
+			.count {
+				background: #09c3ff;
+			}
+		}
+	}
+	&__2 {
+		&.active {
+			.count {
+				background: $theme-color;
+			}
+		}
+	}
+	&__3 {
+		&.active {
+			.count {
+				background: #fdc330;
+			}
+		}
+	}
+	&__4 {
+		&.active {
+			.count {
+				background: #ff5151;
+			}
+		}
+	}
+	&.active {
+        .icon {
+            background: $theme-color-light;
+            .count {
+                color: $white;
+            }
+        }
+		background: $white;
+	}
+}
+/* WORKFLOW CSS END */

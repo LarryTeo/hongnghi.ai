@@ -1,0 +1,52 @@
+/* PAGINATION CSS START */
+.sotcox-pagination {
+    ul {
+        list-style: none;
+        padding: 0px !important;
+        margin-bottom: 0px;
+        @include d-flex;
+        align-items: center;
+        margin-bottom: 0px !important;
+        li {
+            @include d-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $theme-color-light;
+            border-radius: 5px;
+            margin-top: 10px;
+            @include transition(.3s);
+            &:hover {
+                border-color: transparent;
+            }
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+            span,
+            a {
+                width: 50px;
+                height: 50px;
+                @include d-flex;
+                justify-content: center;
+                align-items: center;
+                color: $pera-color;
+                border-radius: 5px;
+                font-size: 18px;
+                font-weight: 700;
+                @include respond(xxs) {
+                    height: 38px;
+                    width: 38px;
+                    font-size: 14px;
+                }
+                &:hover {
+                    color: $white;
+                    background: $theme-color;
+                }
+            }
+            .current {
+                color: $white;
+                background: $theme-color;
+            }
+        }
+    }
+}
+/* PAGINATION CSS END */

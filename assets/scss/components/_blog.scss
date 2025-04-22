@@ -1,0 +1,245 @@
+/* BLOG CSS START */
+.sotcox-post-box {
+	position: relative;
+	.blog-cat {
+		background: $theme-color;
+		color: $white;
+		font-size: 13px;
+		font-weight: 600;
+		line-height: 100%;
+		padding: 6px 12px;
+		border-radius: 5px;
+		position: absolute;
+		top: 30px;
+		left: -20px;
+		z-index: 2;
+	}
+	.thumb {
+		position: relative;
+		border-radius: 10px;
+		img {
+			border-radius: 10px;
+		}
+	}
+	.meta-info {
+		margin-left: 0px;
+		margin-bottom: 0px;
+		margin-top: -15px;
+		flex-wrap: wrap;
+		li {
+			margin-top: 15px;
+			position: relative;
+			line-height: 100%;
+			font-size: 15px;
+			color: $pera-color;
+			padding-top: 0px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $dark;
+			&:not(:last-child) {
+				margin-right: 40px;
+				@include respond(xxs) {
+					margin-right: 20px;
+				}
+			}
+		}
+		a {
+			color: $dark;
+			font-size: 15px;
+			@include respond(xs) {
+				font-size: 14px;
+			}
+			i {
+				margin-right: 5px;
+				color: $theme-color;
+			}
+			&:hover {
+				color: $theme-color;
+			}
+		}
+	}
+	.title {
+		margin-top: 20px;
+		font-size: 35px;
+		font-weight: 700;
+		text-transform: lowercase;
+		@include respond(xs) {
+			font-size: 28px;
+		}
+		&::first-letter {
+			text-transform: uppercase;
+		}
+		a {
+			font-family: $heading-font;
+			padding-bottom: 0.2%;
+		}
+	}
+	p {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-height: 26px;
+	}
+	.sotcox-inline-btn {
+		margin: 0;
+		margin-top: 27px;
+		font-weight: 700;
+		color: $theme-color;
+		text-transform: capitalize;
+		font-size: 14px;
+		.icon {
+			font-size: 14px;
+			color: $theme-color;
+			margin-left: 15px;
+		}
+	}
+}
+
+// post video format css
+.format-video {
+	.sotcox-video-btn {
+		font-size: 24px;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		z-index: 2;
+		left: 50%;
+		top: 50%;
+		translate: -50% -50%;
+		background: $theme-color;
+		@include respond(xxs) {
+			width: 60px;
+			height: 60px;
+			font-size: 14px;
+		}
+		&:hover {
+			background: $theme-color-2;
+		}
+	}
+}
+
+// post gallery format css
+.format-gallery {
+	.owl-nav {
+		div {
+			width: 60px;
+			height: 60px;
+			position: absolute;
+			left: 30px;
+			top: 50%;
+			@include transform(translateY(-50%));
+			@include d-flex;
+			justify-content: center;
+			align-items: center;
+			color: $white;
+			background: transparent;
+			@include transition(0.4s);
+			border: 1px solid $white;
+			border-radius: 50%;
+			@include respond(xxs) {
+				left: 15px;
+				width: 40px;
+				height: 40px;
+			}
+			&:hover {
+				border-color: $theme-color;
+				background: $theme-color;
+			}
+		}
+		.owl-next {
+			left: auto;
+			right: 30px;
+			@include respond(xxs) {
+				right: 15px;
+			}
+		}
+	}
+}
+
+// post audio format css
+.format-audio {
+	.postbox__audio {
+		iframe {
+			width: 100%;
+            min-height: 350px;
+            @include respond(xxs) {
+                min-height: 250px;
+            }
+		}
+	}
+}
+
+// post quote format css
+.post-details-content,
+.format-quote {
+	.post-excerpt {
+		@include d-flex;
+		align-items: center;
+		background: $theme-color;
+		padding: 50px 40px;
+		flex-direction: column;
+		text-align: center;
+		justify-content: center;
+		padding-bottom: 40px;
+		p {
+			color: #dad3b8;
+			font-size: 24px;
+			line-height: 36px;
+			position: relative;
+			z-index: 2;
+		}
+		blockquote {
+			position: relative;
+			z-index: 2;
+			margin-bottom: 0px;
+			br {
+				display: none;
+			}
+			cite {
+				display: block;
+				margin-top: 10px;
+				a {
+					color: $white;
+					font-size: 14px;
+					font-weight: 700;
+				}
+			}
+		}
+		.quote-small {
+			width: 50px;
+			height: 50px;
+			@include d-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			background: $white;
+			padding: 10px;
+			z-index: 1;
+		}
+		.quote-big {
+			z-index: 1;
+			width: 40%;
+			top: 15px;
+			max-width: 230px;
+		}
+	}
+}
+
+.format-quote {
+	.post-excerpt {
+		p {
+			display: block;
+			overflow: visible;
+			font-size: 16px;
+			line-height: 26px;
+		}
+	}
+}
+.blog__wrapper {
+	@include respond(lg) {
+		padding-right: 0px;
+	}
+}
+/* BLOG CSS END */

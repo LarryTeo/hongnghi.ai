@@ -1,0 +1,148 @@
+/* BUTTON CSS START */
+.sotcox-btn {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: $white;
+	padding: 15px 42px;
+	font-weight: 700;
+	border-radius: 5px;
+	display: inline-block;
+	background: $theme-color;
+	letter-spacing: 0.1em;
+	position: relative;
+	@include transition(0.4s linear);
+    overflow: hidden;
+    z-index: 1;
+	&__small {
+		padding: 10px 36px;
+	}
+	&__round{
+		border-radius: 40px;
+	}
+	&__borderd {
+		border: 1px solid $theme-color-light;
+		border-radius: 40px;
+		color: $dark;
+		background: $white;
+		text-transform: capitalize;
+		font-size: 16px;
+		padding: 14px 42px;
+		letter-spacing: 0px;
+	}
+	span {
+		position: absolute;
+		display: block;
+		width: 0;
+		height: 0;
+		border-radius: 50%;
+		background-color: $theme-color-2;
+		transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+	}
+	&.has-span {
+		margin-bottom: -10px;
+	}
+	&:hover {
+        color: $white;
+		span {
+            width: 225%;
+            height: 562.5px;
+        }
+	}
+}
+
+.sotcox-inline-btn {
+	position: relative;
+	overflow: hidden;
+	width: max-content;
+	@include d-flex;
+	align-items: center;
+	font-weight: 700;
+	color: $theme-color;
+	.icon {
+		position: relative;
+		margin-left: 55px;
+	}
+	i {
+		transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1),
+			opacity 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+		&:first-child {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			transform: translateX(-10px) translateY(0);
+		}
+		&:last-child {
+			opacity: 1;
+			display: block;
+			transform: translateY(0) translateY(0);
+		}
+	}
+	&:hover {
+		i {
+			&:first-child {
+				opacity: 1;
+				transform: translateZ(0);
+			}
+			&:last-child {
+				opacity: 0;
+				transform: translateX(20px) translateY(0);
+			}
+		}
+	}
+}
+
+.sotcox-video-wrapper {
+	@include d-flex;
+	align-items: center;
+	justify-content: center;
+	.sotcox-video-btn {
+		margin-right: 15px;
+	}
+	span {
+		font-size: 14px;
+		color: $dark;
+		font-weight: 700;
+		text-transform: capitalize;
+	}
+}
+.sotcox-video-btn {
+	width: 60px;
+	height: 60px;
+	color: $white;
+	background: $theme-color-2;
+	border-radius: 50%;
+	font-size: 12px;
+	@include d-flex;
+	align-items: center;
+	justify-content: center;
+	&:hover {
+		background: $theme-color;
+		color: $white;
+	}
+}
+
+.sotcox-zoom-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -40%;
+	width: 30px;
+	height: 30px;
+	color: $white;
+	background: $theme-color-2;
+	border-radius: 50%;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 2;
+	@include d-flex(center, center);
+	flex-shrink: 16px;
+	@include transition(0.4s);
+	&:hover {
+		background: $theme-color;
+		color: $white;
+	}
+}
+/* BUTTON CSS END */

@@ -1,0 +1,35 @@
+/* MISSION CSS START */
+.sotcox-mission-box {
+    border-radius: 10px;
+    border: 1px solid $theme-color-light;
+    padding: 50px;
+    padding-bottom: 45px;
+    @include respond(xs) {
+        padding: 30px;
+        padding-bottom: 25px;
+    }
+    .icon {
+        width: 80px;
+        height: 80px;
+        @include d-flex;
+        align-items: center;
+        justify-content: center;
+        background: #eaf1fe;
+        border-radius: 50%;
+        &__2 {
+            background: #e7f9ff;
+        }
+        &__3 {
+            background: #fff9eb;
+        }
+    }
+    .title {
+        font-size: 36px;
+        margin-bottom: 25px;
+        @include respond(xs) {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+    }
+}
+/* MISSION CSS END */

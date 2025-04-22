@@ -1,0 +1,31 @@
+/* SUPPORT CSS START */
+.stocox-support-box {
+    text-align: center;
+    padding: 45px 35px;
+    border: 1px solid $theme-color-light;
+    border-radius: 10px;
+    @include transition(0.4s);
+    .icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 1px solid $theme-color-light;
+        margin: 0 auto;
+        @include d-flex(center, center);
+        @include transition(0.4s);
+    }
+    .title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    a {
+        color: $pera-color;
+        display: block;
+    }
+    &:hover {
+        .icon {
+            transform: rotateY(180deg);
+        }
+    }
+}
+/* SUPPORT CSS END */

@@ -1,0 +1,114 @@
+/* SERVICE CSS START */
+.sotcox-service-section {
+    position: relative;
+    .small-shape {
+        position: absolute;
+        left: 5%;
+        bottom: 30%;
+        animation: shapeDownLeft 2s linear infinite alternate;
+        &__2 {
+            left: auto;
+            right: 10%;
+            bottom: auto;
+            top: 30%;
+            animation: shapeTopLeft 2s linear infinite alternate;
+        }
+    }
+}
+
+.sotcox-service-wrapper {
+    .owl-stage-outer {
+        border: 1px solid $theme-color-light;
+    }
+}
+.sotcox-service-item {
+    border-right: 1px solid $theme-color-light;
+    position: relative;
+    padding: 50px;
+    &::after {
+        @include after;
+        background: $theme-color;
+        height: 2px;
+        width: 0;
+        @include transition(.4s linear);
+    }
+    .icon {
+        margin-bottom: 40px;
+        width: max-content;
+        @include transition(.4s);
+        img {
+            width: auto;
+        }
+    }
+    .title {
+        a {
+            font-family: $heading-font;
+            color: $dark;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .sotcox-inline-btn {
+        margin-top: 35px;
+        color: $dark;
+        font-size: 18px;
+        display: inline-block;
+        color: $dark;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+        .icon {
+            transform: rotateY(180deg);
+        }
+    }
+    &__style-2 {
+        padding: 0px;
+        padding-bottom: 25px;
+        padding-left: 40px;
+        border: none;
+        border-left: 2px solid $theme-color-light;
+        &::after {
+            display: none;
+        }
+        .icon {
+            background: $theme-color;
+            width: 85px;
+            height: 85px;
+            border-radius: 10px;
+            @include d-flex;
+            align-items: center;
+            justify-content: center;
+            &__2 {
+                background: #3dddc6;
+            }
+            &__3 {
+                background: $theme-color-2;
+            }
+            &__4 {
+                background: #fedb35;
+            }
+            &__5 {
+                background: #ff5151;
+            }
+        }
+        .title {
+            margin-top: 20px;
+            a {
+                color: $dark;
+                font-size: 30px;
+            }
+        }
+    }
+}
+.sotcox-service-section-page {
+    .sotcox-service-item {
+        border: 1px solid $theme-color-light;
+    }
+}
+/* SERVICE CSS END */

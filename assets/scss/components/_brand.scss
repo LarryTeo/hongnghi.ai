@@ -1,0 +1,68 @@
+/* BRAND CSS START */
+.sotcox-brand-box {
+    @include d-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    border: 1px solid $theme-color-light;
+    padding: 10px;
+    border-radius: 40px;
+    width: auto;
+    background: $white;
+    @include transition(.4s);
+    .icon {
+        background: $theme-color;
+        width: 60px;
+        height: 60px;
+        @include d-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        border-radius: 50%;
+        @include transition(.4s);
+    }
+    .title {
+        font-size: 18px;
+        @include transition(.3s);
+    }
+    &__1 {
+        .icon {
+            background: $theme-color;
+        }
+    }
+    &__2 {
+        .icon {
+            background: #fff3ed;
+        }
+    }
+    &__3 {
+        .icon {
+            background: #fff9eb;
+        }
+    }
+    &__4 {
+        .icon {
+            background: #e7f3ed;
+        }
+    }
+    &__5 {
+        .icon {
+            background: #e7f9ff;
+        }
+    }
+    &__6 {
+        .icon {
+            background: #f9f3fb;
+        }
+    }
+    &__7 {
+        .icon {
+            background: #ffeeee;
+        }
+    }
+    &:hover {
+        .icon {
+            transform: rotateY(180deg);
+        }
+    }
+}
+/* BRAND CSS END */
