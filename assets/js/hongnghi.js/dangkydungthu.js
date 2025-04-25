@@ -62,7 +62,7 @@
                     phone: form.phone.value,
                     email: form.email.value,
                     location: form.location.value,
-                    adress: form.adress.value,
+                    address: form.address.value,
                     product: form.product.value,
                     note: form.note.value || "",
                     to_email: "dung.bui@mdfhongnghi.vn", // 📨 Người nhận
