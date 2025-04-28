@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Trang chủ -->
+    <url>
+        <loc>https://hongnghi.ai/trang-chu.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Giới thiệu -->
+    <url>
+        <loc>https://hongnghi.ai/gioi-thieu.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Về chúng tôi -->
+    <url>
+        <loc>https://hongnghi.ai/ve-chung-toi.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Sản phẩm - Dịch vụ -->
+    <url>
+        <loc>https://hongnghi.ai/san-pham-dich-vu.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Thiết kế phần mềm theo yêu cầu -->
+    <url>
+        <loc>https://hongnghi.ai/thiet-ke-phan-mem-theo-yeu-cau.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Dịch vụ phần cứng -->
+    <url>
+        <loc>https://hongnghi.ai/dich-vu-phan-cung.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Kết nối API -->
+    <url>
+        <loc>https://hongnghi.ai/ket-noi-api.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Dịch vụ IT Outsource -->
+    <url>
+        <loc>https://hongnghi.ai/dich-vu-it-outsource.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Tin tức - Sự kiện -->
+    <url>
+        <loc>https://hongnghi.ai/tin-tuc-su-kien.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Liên hệ -->
+    <url>
+        <loc>https://hongnghi.ai/lien-he.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Thông tin liên hệ -->
+    <url>
+        <loc>https://hongnghi.ai/thong-tin-lien-he.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Biểu mẫu đăng ký dùng thử -->
+    <url>
+        <loc>https://hongnghi.ai/dang-ky-dung-thu.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.6</priority>
+    </url>
+
+</urlset>
