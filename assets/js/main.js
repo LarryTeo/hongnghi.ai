@@ -391,3 +391,10 @@
 		background();
 	});
 })(jQuery);
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'F12') {
+        event.preventDefault();
+        alert('Chức năng này đã bị vô hiệu hóa.');
+    }
+});
